@@ -1,4 +1,3 @@
-// Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
 
@@ -49,5 +48,31 @@ module.exports = function(app) {
         id: req.user.id
       });
     }
+  });
+
+  // GET route for showing all businesses
+  app.get("/api/businesses", (req, res) => {
+    db.Business.findAll({}).then(result => {
+      res.json(result);
+    });
+  });
+
+  //GET route for retrieving a businesses based on category
+  app.get("/api/posts/:category", (req, res) => {
+    db.Business.findAll({
+      where: {
+        category: req.params.category
+      },
+      include: [db.Category]
+    }).then(result => {
+      res.json(result);
+    });
+  });
+
+  //POST route for saving a new business to the businesses table
+  app.post("/api/businesses", (req, res) => {
+    db.Business.create(req.body).then(result => {
+      res.json(result);
+    });
   });
 };
