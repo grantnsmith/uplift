@@ -9,6 +9,7 @@ form.login {
 
 .navbar {
   background-color: #FEE4D7;
+  margin-bottom: 30px;
 }
 
 .nav-link {
@@ -25,9 +26,8 @@ form.login {
   color: #FEE4D7;
 }
 
-.search {
+.background-base {
   background-color: #E6A17D;
-  margin-top: 30px;
 }
 
 .sPhrase {
@@ -60,6 +60,21 @@ form.login {
 }
 
 .card-img-top {
+  justify-content: center;
+}
+
+.about-sect {
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.about-card-sect {
+  justify-content: center;
+  background-color: #FEE4D7;
+}
+
+.about-body {
   justify-content: center;
 }
 
