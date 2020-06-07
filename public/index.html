@@ -1,15 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="stylesheets/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="stylesheets/style.css" rel="stylesheet" />
     <title>Uplift</title>
-</head>
-<body>
-    
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Uplift</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="charity.html">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News & Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Non-Profits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+        </ul>
+          <button class="btn btn-outline-success my-2 my-sm-0" href="login.html" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Search -->
+    <div class="container search col-md-10">
+        <div class="alert" role="alert">
+            <div class="row">
+                <div>Don't Just Talk About It, Be About It! Support Black Owned Business!</div>
+            </div>
+            <div class="row">
+                <form class="card d-flex algin-content-start flex-wrap col-md-10">
+                    <div class="form-group col-md-6">
+                    <label for="business-form">Who Are You Looking For?</label>
+                    <input type="business" class="form-control" id="business-form" placeholder="Business Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="business-form">Where are you?</label>
+                        <input type="business" class="form-control" id="business-form" placeholder="City">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Cards -->
+    <div class="container d-flex algin-content-start flex-wrap col-md-12">
+        <div class="row col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Resturants</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cold-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Gyms</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cold-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Fashion / Clothing</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cold-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Hair Care</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer border-bottom-0 fixed-botom">
+       <p>Uplift</p>
+    </div>
+
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </html>
