@@ -2,3 +2,75 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.index {
+  background-color: #935934;
+}
+
+.navbar {
+  background-color: #FEE4D7;
+}
+
+.nav-link {
+  color: #935934;
+}
+
+.login {
+  border: solid #935934;
+  color: #935934;
+}
+
+.login:hover {
+  background-color: #935934;
+  color: #FEE4D7;
+}
+
+.search {
+  background-color: #E6A17D;
+  margin-top: 30px;
+}
+
+.sPhrase {
+  text-align: center;
+  justify-content: center;
+  color: #553827
+}
+
+.search-card {
+  justify-content: center;
+}
+
+.search-card-c {
+  justify-content: center;
+  background-color: #FEE4D7;
+}
+
+.search-words {
+  color: #553827;
+}
+
+.b-card-sect {
+  background-color: #E6A17D;
+}
+
+.b-card {
+  margin: 2px;
+  justify-content: center;
+  padding: 5px;
+}
+
+.card-img-top {
+  justify-content: center;
+}
+
+.footer {
+  text-align: center;
+  background-color: #FEE4D7;
+  color: #553827;
+  /* margin-top: 40px; */
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}

@@ -12,10 +12,10 @@
     <link href="stylesheets/style.css" rel="stylesheet" />
     <title>Uplift</title>
   </head>
-  <body>
+  <body class="index">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="#">Uplift</a>
       <button
         class="navbar-toggler"
@@ -49,7 +49,7 @@
             <a class="nav-link" href="#">About Us</a>
           </li>
         </ul>
-          <button class="btn btn-outline-success my-2 my-sm-0" href="login.html" type="submit">
+          <button class="login btn my-2 my-sm-0" href="login.html" type="submit">
             Login
           </button>
         </form>
@@ -57,19 +57,19 @@
     </nav>
 
     <!-- Search -->
-    <div class="container search col-md-10">
+    <div class="container search shadow p-3 mb-5 rounded col-md-10">
         <div class="alert" role="alert">
-            <div class="row">
+            <div class="row sPhrase">
                 <div>Don't Just Talk About It, Be About It! Support Black Owned Business!</div>
             </div>
-            <div class="row">
-                <form class="card d-flex algin-content-start flex-wrap col-md-10">
+            <div class="row search-card">
+                <form class="card search-card-c d-flex algin-content-start flex-wrap col-md-10">
                     <div class="form-group col-md-6">
-                    <label for="business-form">Who Are You Looking For?</label>
+                    <label for="business-form" class="search-words">Who Are You Looking For?</label>
                     <input type="business" class="form-control" id="business-form" placeholder="Business Name">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="business-form">Where are you?</label>
+                        <label for="business-form" class="search-words">Where are you?</label>
                         <input type="business" class="form-control" id="business-form" placeholder="City">
                     </div>
                 </form>
@@ -78,8 +78,9 @@
     </div>
 
     <!-- Business Cards -->
-    <div class="container d-flex algin-content-start flex-wrap col-md-12">
-        <div class="row col-md-3">
+    <div class="container b-card-sect shadow p-3 mb-5 rounded d-flex algin-content-start col-md-10">
+
+        <div class="row b-card col-md-3">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -88,7 +89,7 @@
             </div>
         </div>
 
-        <div class="row cold-md-3">
+        <div class="row b-card col-md-3">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -97,7 +98,7 @@
             </div>
         </div>
 
-        <div class="row cold-md-3">
+        <div class="row b-card col-md-3">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -106,7 +107,7 @@
             </div>
         </div>
 
-        <div class="row cold-md-3">
+        <div class="row b-card col-md-3">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
