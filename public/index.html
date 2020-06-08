@@ -89,6 +89,7 @@
                   <option value="gym">Gyms</option>
                   <option value="fashion">Fashion / Clothing</option>
                   <option value="hair">Hair Care</option>
+                  <option id="bus-type"></option>
                 </select>
               </div>
 
@@ -102,6 +103,7 @@
                   placeholder="Business Type"
                 >
                   <option selected>Business Name</option>
+                  <option id="bus-name"></option>
                 </select>
               </div>
               <div class="form-group col-md-4">
@@ -115,6 +117,7 @@
                 >
                   <option selected>City...</option>
                   <option value="seattle">Seattle</option>
+                  <option id="city-name"></option>
                 </select>
               </div>
             </div>
@@ -137,6 +140,9 @@
     <div
       class="container b-card-sect background-base shadow p-3 mb-5 rounded d-flex algin-content-start col-md-10"
     >
+        <h2 id=search-result></h2>
+
+        <div id="bCard-view"></div>
       <!-- <div class="row b-card col-md-3">
         <div class="card" style="width: 18rem;">
           <img src="..." class="card-img-top" alt="..." />
