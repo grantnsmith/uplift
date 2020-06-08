@@ -16,12 +16,21 @@ form.login {
   color: #935934;
 }
 
-.login {
+.nav-link:hover {
+  color: #553827
+}
+
+.btn {
   border: solid #935934;
   color: #935934;
 }
 
-.login:hover {
+.submit {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
   background-color: #935934;
   color: #FEE4D7;
 }
