@@ -3,6 +3,13 @@ CREATE database upliftDB;
 
 USE upliftDB;
 
+CREATE TABLE categories (
+   id INT AUTO_INCREMENT NOT NULL,
+   businessType VARCHAR(255) NOT NULL,
+   imageURL VARCHAR(255) NOT NULL DEFAULT "./assets/fist.jpg",
+   PRIMARY KEY (id)
+);
+
 CREATE TABLE businesses (
    id INT AUTO_INCREMENT NOT NULL,
    name VARCHAR(255) NOT NULL,
@@ -17,12 +24,6 @@ CREATE TABLE businesses (
    FOREIGN KEY (category_id) REFERENCES categories(id)
 );
  
-CREATE TABLE categories (
-   id INT AUTO_INCREMENT NOT NULL,
-   businessType VARCHAR(255) NOT NULL,
-   imageURL VARCHAR(255) NOT NULL DEFAULT "./assets/fist.jpg",
-   PRIMARY KEY (id)
-);
 
 
 
