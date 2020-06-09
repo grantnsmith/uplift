@@ -58,10 +58,10 @@ module.exports = function(app) {
   });
 
   //GET route for retrieving a businesses based on category
-  app.get("/api/posts/:category", (req, res) => {
+  app.get("/api/businesses/:category", (req, res) => {
     db.Business.findAll({
       where: {
-        category: req.params.category
+        CategoryID: 1 //This is not right *****
       },
       include: [db.Category]
     }).then(result => {
