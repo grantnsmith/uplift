@@ -1,5 +1,8 @@
 const db = require("../models");
 const passport = require("../config/passport");
+require("dotenv").config();
+const NewsAPI = require("newsapi");
+const newsapi = new NewsAPI(process.env.NewsAPI_Key);
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -74,5 +77,18 @@ module.exports = function(app) {
     db.Business.create(req.body).then(result => {
       res.json(result);
     });
+  });
+
+  //GET route for querying the NewsAPI package for articles
+  app.get("/api/news/:sort", (req, res) => {
+    newsapi.v2
+      .everything({
+        q: "blm",
+        sortBy: req.params.sort,
+        language: "en"
+      })
+      .then(response => {
+        res.json(response);
+      });
   });
 };
