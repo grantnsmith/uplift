@@ -64,7 +64,7 @@ module.exports = function(app) {
   app.get("/api/businesses/:category", (req, res) => {
     db.Business.findAll({
       where: {
-        CategoryID: 1 //This is not right *****
+        CategoryID: req.params.category
       },
       include: [db.Category]
     }).then(result => {
