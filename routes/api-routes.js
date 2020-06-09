@@ -60,13 +60,24 @@ module.exports = function(app) {
     });
   });
 
-  //GET route for retrieving a businesses based on category
+  //GET route for retrieving all businesses based on category
   app.get("/api/businesses/:category", (req, res) => {
     db.Business.findAll({
       where: {
         CategoryID: req.params.category
       },
       include: [db.Category]
+    }).then(result => {
+      res.json(result);
+    });
+  });
+
+  //GET route for retrieving all businesses based on city
+  app.get("/api/businesses/:city", (req, res) => {
+    db.Business.findAll({
+      where: {
+        //CITY: req.params.category ***** Add city column to database?
+      }
     }).then(result => {
       res.json(result);
     });
