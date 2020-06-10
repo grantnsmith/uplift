@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <title>Uplift</title>
+  </head>
+  <body class="index">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">Uplift</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" id="home" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="addBus" href="#">Add A Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="News" href="#">News & Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="NonP" href="#">Non-Profits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="about" href="#">About Us</a>
+          </li>
+        </ul>
+        <button
+          class="btn my-2 my-sm-0"
+          id="loginSignUp"
+          href="#"
+          type="submit"
+        >
+          Login / Sign Up
+        </button>
+      </div>
+    </nav>
+
+    <!-- Search -->
+    <div
+      class="container search background-base shadow p-3 mb-5 rounded col-md-10"
+    >
+      <div class="alert" role="alert">
+        <div class="row sPhrase">
+          <div>
+            Don't Just Talk About It, Be About It! Support Black Owned Business!
+          </div>
+        </div>
+        <div class="row search-card">
+          <div
+            class="card search-card-c d-flex algin-content-start flex-wrap col-md-10"
+          >
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="business-form" class="search-words"
+                  >Type Of Charity?</label
+                >
+                <select
+                  class="form-control"
+                  id="bus-type"
+                  placeholder="Business Type"
+                >
+                  <option value ="none" selected disabled>Charity Type</option>
+                  <option value="restaurants">Restaurants</option>
+                  <option value="gyms">Gyms</option>
+                  <option value="fashion">Fashion / Clothing</option>
+                  <option value="hair">Hair Care</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="business-form" class="search-words"
+                  >Or Chairty Name?</label
+                >
+                <form>
+                  <input type="text" id="bus-name">
+              </form>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="business-form" class="search-words"
+                  >Where are you?</label
+                >
+                <select
+                  class="form-control"
+                  id="city-name"
+                  placeholder="City"
+                >
+                  <option value="none" selected disabled>City...</option>
+                  <option value="seattle">Seattle</option>
+                </select>
+              </div>
+            </div>
+            <div class="row submit">
+                <button
+                class="btn my-2 my-sm-0"
+                id="submit"
+                href="#"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+
+    <!-- Footer -->
+    <div class="footer border-bottom-0 fixed-botom">
+      <p>Uplift</p>
+    </div>
+
+    <script> src="./js/charity.js"</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
