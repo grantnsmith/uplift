@@ -13,6 +13,7 @@ CREATE TABLE categories (
 CREATE TABLE businesses (
    id INT AUTO_INCREMENT NOT NULL,
    name VARCHAR(255) NOT NULL,
+   city VARCHAR(255) NOT NULL,
    phone INT,
    website TEXT(700),
    address TEXT(700),
