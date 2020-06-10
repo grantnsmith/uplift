@@ -6,14 +6,19 @@ $(document).ready(() => {
   //When submit button is clicked - NEED TO CREATE CASES FOR EACH
   submitBtn.on("click", event => {
     event.preventDefault();
-    //ADD CASE HERE
     const category = parseInt(businessType.val());
-    console.log(category);
-    getBusinessesByCategory(category);
-    //ADD CASE HERE
     const city = cityName.val();
     console.log(city);
-    getBusinessesByCity(city);
+    console.log(category);
+    if (city === null && category === 0) {
+      alert("You must make at least one selection in order to search.")
+    } else if (city === null && category > 0) {
+      getBusinessesByCategory(category);
+    } else if (city !== null && category === 0) {
+      getBusinessesByCity(city);
+    } else {
+      getBusinessesByCityAndCategory(city, category);
+    }
   });
 
   //Make a GET request for businesses by category
@@ -23,9 +28,16 @@ $(document).ready(() => {
     });
   }
 
-  //Make a GET request for businesses by city **** NEED TO UPDATE DB
+  //Make a GET request for businesses by city
   function getBusinessesByCity(city) {
-    $.get("/api/businesses/" + city, result => {
+    $.get("/api/city/" + city, result => {
+      console.log(result);
+    });
+  }
+
+  // //Make a GET request for businesses by city AND category
+  function getBusinessesByCityAndCategory(city, category) {
+    $.get("/api/cityandcategory/" + city + "/" + category, result => {
       console.log(result);
     });
   }
