@@ -16,6 +16,7 @@ db.Category.create({
 -- Test Business Table Seeds
 db.Business.create({
     name: "Restaurant Test",
+    city: "Seattle",
     phone: 1234,
     website: "www.example1.com",
     address: "123 test street",
@@ -26,6 +27,7 @@ db.Business.create({
 });
 db.Business.create({
     name: "Non-Profit Test",
+    city: "Seattle",
     phone: 2345,
     website: "www.example2.com",
     address: "223 test street",
@@ -36,6 +38,7 @@ db.Business.create({
 });
 db.Business.create({
     name: "Fashion Test",
+    city: "Seattle"
     phone: 3456,
     website: "www.example3.com",
     address: "323 test street",
