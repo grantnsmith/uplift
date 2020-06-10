@@ -1,6 +1,5 @@
 $(document).ready(() => {
   const businessType = $("#bus-type");
-  const businessName = $("#bus-name");
   const cityName = $("#city-name");
   const submitBtn = $("#submit");
 
