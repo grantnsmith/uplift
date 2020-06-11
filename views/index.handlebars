@@ -57,38 +57,12 @@
         </div>
       </div>
     </div>
-        <div
-      class="container b-card-sect background-base shadow p-3 mb-5 rounded d-flex algin-content-start col-md-10"
-    >
-        <div id="bCard-view"></div>
-      <div class="row b-card col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row b-card col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row b-card col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </div>
+    
+    <div class="container b-card-sect background-base shadow p-3 mb-5 rounded d-flex algin-content-start col-md-10">
+      {{#each result}}
+      {{> businessCards }}
+      {{/each}}
     </div>
-    {{> twitter }} 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
