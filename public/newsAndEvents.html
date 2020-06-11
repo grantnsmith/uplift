@@ -10,40 +10,7 @@
     <title>Uplift</title>
 
     <style>
-      h1 {
-        margin-bottom: 1.5rem;
-        color: #4A5568;
-      }
 
-      #dropdownMenuButton {
-        background-color: #EDF2F7;
-        border: solid #4A5568 1px;
-        color: #2B6CB0;
-      }
-
-      .article-image {
-        width: 6rem;
-      }
-
-      .article-title {
-        color: #2B6CB0;
-        font-weight: bold;
-      }
-
-      .article-date {
-        color: #A0AEC0;
-        font-size: small;
-        font-weight: bold;
-        letter-spacing: 0.1rem;
-      }
-
-      .article-description {
-        color: #2D3748;
-      }
-
-      .article-link, .fas {
-        color: #A0AEC0;
-      }
 
     </style>
 </head>
@@ -83,9 +50,10 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-8 append-news">
+            <div class="col-12 col-md-8 append-newsAndEvents">
               <div class="d-flex justify-content-between">
-                <h1>News</h1>
+                <h1 id="news-header">News</h1>
+                <h1 id="events-header">Events</h1>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sort By
