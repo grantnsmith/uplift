@@ -65,10 +65,13 @@ module.exports = function(app) {
     db.Business.findAll({
       where: {
         CategoryID: req.params.category
-      },
-      include: [db.Category]
+      }
     }).then(result => {
-      res.json(result);
+      const businessObject = {
+        business: result
+      };
+      console.log(businessObject);
+      res.render("index", businessObject);
     });
   });
 
