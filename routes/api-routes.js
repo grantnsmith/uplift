@@ -67,11 +67,8 @@ module.exports = function(app) {
         CategoryID: req.params.category
       }
     }).then(result => {
-      const businessObject = {
-        business: result
-      };
-      console.log(businessObject);
-      res.render("index", businessObject);
+      console.log(result);
+      res.render("index", result);
     });
   });
 
@@ -87,7 +84,7 @@ module.exports = function(app) {
     });
   });
 
-  //GET route for retreiving all business based on city
+  //GET route for retreiving all business based on city and category
   app.get("/api/cityandcategory/:city/:category", (req, res) => {
     db.Business.findAll({
       where: {

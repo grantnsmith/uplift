@@ -24,7 +24,7 @@ $(document).ready(() => {
   //Make a GET request for businesses by category
   function getBusinessesByCategory(category) {
     $.get("/api/businesses/" + category, result => {
-      console.log(result);
+      location.reload();
     });
   }
 
