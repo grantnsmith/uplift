@@ -2,6 +2,7 @@ const path = require("path");
 
 // Middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const puppeteer = require("./puppeteer.js");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -35,5 +36,11 @@ module.exports = function(app) {
 
   app.get("/news", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/newsAndEvents.html"));
+  });
+
+  app.get("/scrape", (req, res) => {
+    puppeteer.then(data => {
+      res.json(data);
+    });
   });
 };

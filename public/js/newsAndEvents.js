@@ -1,12 +1,20 @@
 $(() => {
   // Display the news by popularity on page load
   displayNews("popularity");
+  $("#events-header").css("color", "#CBD5E0");
 
   // When the sort button is clicked, update the button name and display the news by the requested sort
   $(document).on("click", ".dropdown-item", function(event) {
     event.preventDefault();
     $("#dropdownMenuButton").text($(this).text());
     displayNews($(this).data("sort"));
+  });
+
+  // When "News" is clicked, make font bolder and display the news
+  $("#news-header").on("click", () => {
+    $("#news-header").css("color", "#4A5568");
+    $("#events-header").css("color", "#CBD5E0");
+    displayNews("popularity");
   });
 
   // Make a get request and append the first 10 results
@@ -26,12 +34,54 @@ $(() => {
                 <p class="article-date">${articleDate}</p>
                 <p class="article-description">${response.articles[i].description}</p>
                 <i class="fas fa-newspaper"></i>
-                <a href="${response.articles[i].url}" class="article-link">Full Article: ${response.articles[i].source.name}</a>
+                <a href="${response.articles[i].url}" target="_blank" class="article-link">Full Article: ${response.articles[i].source.name}</a>
               </div>
             </li>
           </ul>`;
-        $(".append-news").append(newArticle);
+        $(".append-newsAndEvents").append(newArticle);
       }
     });
+  }
+
+  // When "Events" is clicked, make font bolder and display the scraped events
+  $("#events-header").on("click", () => {
+    $("#events-header").css("color", "#4A5568");
+    $("#news-header").css("color", "#CBD5E0");
+    getScrape();
+  });
+
+  // AJAX call to perform scrape server side
+  function getScrape() {
+    $.get("/scrape").then(data => {
+      renderHTML(data);
+    });
+  }
+
+  // Append 10 scraped events to HTML
+  function renderHTML(data) {
+    $(".list-unstyled").remove();
+    for (let i = 0; i < data.length; i++) {
+      let date = data[i].date;
+      if (date.includes("+")) {
+        date = date.split(" + ")[0];
+      }
+      console.log(date);
+      const formattedDate = moment(date)
+        .format("DD MMM")
+        .toUpperCase();
+      const newListItem = `
+      <ul class="list-unstyled">
+        <li class="media">
+          <div class="calendar-box text-center">${formattedDate}</div>
+          <div class="media-body">
+            <h5 class="mt-0 mb-1 article-title">${data[i].title}</h5>
+            <p class="article-date">${date}</p>
+            <a href="${data[i].url}" target="_blank" class="article-link">Link to Eventbrite</a>
+          </div>
+        </li>
+      </ul>`;
+
+      $(".append-newsAndEvents").append(newListItem);
+    }
   }
 });

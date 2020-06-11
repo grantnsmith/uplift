@@ -98,3 +98,61 @@ form.login {
   left: 0;
   bottom: 0;
 }
+
+/* News and Events */
+/* ---------------------------------- */
+h1 {
+  margin-bottom: 1.5rem;
+  color: #4A5568;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+#dropdownMenuButton {
+  background-color: #EDF2F7;
+  border: solid #4A5568 1px;
+  color: #2B6CB0;
+}
+
+.article-image {
+  width: 6rem;
+}
+
+.article-title {
+  color: #2B6CB0;
+  font-weight: bold;
+}
+
+.article-date {
+  color: #A0AEC0;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.article-description {
+  color: #2D3748;
+}
+
+.article-link, .fas {
+  color: #A0AEC0;
+}
+
+.calendar-box {
+  width: 20%;
+  background-color: #2D3748;
+  color: white;
+  margin-right: 2rem;
+  border-radius: 8%;
+  font-weight: bold;
+  display: inline-block;
+  height: 6rem;
+  line-height: 6rem;
+  vertical-align: 3rem;
+  font-size: 2rem;
+  overflow: hidden;
+}
+/* ---------------------------------- */
+/* News and Events */
