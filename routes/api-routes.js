@@ -117,3 +117,5 @@ module.exports = function(app) {
       });
   });
 };
+
+// GET route for querying the CharityAPI package for relevant charities
