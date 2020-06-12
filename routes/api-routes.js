@@ -3,7 +3,7 @@ const passport = require("../config/passport");
 require("dotenv").config();
 const NewsAPI = require("newsapi");
 const newsapi = new NewsAPI(process.env.NewsAPI_Key);
-const puppeteer = require("../config/middleware/puppeteer.js");
+const puppeteer = require("../util/puppeteer.js");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -118,8 +118,8 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/scrape", (req, res) => {
-    puppeteer.then(data => {
+  app.get("/scrape/:selection", (req, res) => {
+    puppeteer(req.params.selection).then(data => {
       res.json(data);
     });
   });
