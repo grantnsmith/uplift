@@ -18,7 +18,7 @@ module.exports = function(app) {
     res.render("signup");
   });
 
-  app.get("/addBusiness", (req, res) => {
+  app.get("/addBusiness", isAuthenticated, (req, res) => {
     res.render("addbusiness");
   });
 
