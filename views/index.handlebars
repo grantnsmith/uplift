@@ -1,78 +1,47 @@
-{{> nav }} 
-<div
-      class="container search background-base shadow p-3 mb-5 rounded col-md-10"
-    >
-      <div class="alert" role="alert">
-        <div class="row sPhrase">
-          <div>
-            Don't Just Talk About It, Be About It! Support Black Owned Business!
+{{> nav }}
+<div class="container search background-base shadow p-3 mb-5 rounded col-md-10">
+  <div class="alert" role="alert">
+    <div class="row sPhrase">
+      <div>
+        Don't Just Talk About It, Be About It! Support Black Owned Business!
+      </div>
+    </div>
+    <div class="row search-card">
+      <div class="card search-card-c d-flex algin-content-start flex-wrap col-md-10">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="business-form" class="search-words">What type of business are you looking for?</label>
+            <select class="form-control" id="bus-type" placeholder="Business Type">
+              <option value="0" selected>Business Type</option>
+              <option value="1">Restaurants</option>
+              <option value="2">Gyms</option>
+              <option value="3">Fashion / Clothing</option>
+              <option value="4">Hair Care</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="business-form" class="search-words">Where are you located?</label>
+            <select class="form-control" id="city-name" placeholder="City">
+              <option value="0" selected disabled>City...</option>
+              <option value="seattle">Seattle</option>
+            </select>
           </div>
         </div>
-        <div class="row search-card">
-          <div
-            class="card search-card-c d-flex algin-content-start flex-wrap col-md-10"
-          >
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label for="business-form" class="search-words"
-                  >What type of business are you looking for?</label
-                >
-                <select
-                  class="form-control"
-                  id="bus-type"
-                  placeholder="Business Type"
-                >
-                  <option value ="0" selected>Business Type</option>
-                  <option value="1">Restaurants</option>
-                  <option value="2">Gyms</option>
-                  <option value="3">Fashion / Clothing</option>
-                  <option value="4">Hair Care</option>
-                </select>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="business-form" class="search-words"
-                  >Where are you located?</label
-                >
-                <select
-                  class="form-control"
-                  id="city-name"
-                  placeholder="City"
-                >
-                  <option value="0" selected disabled>City...</option>
-                  <option value="seattle">Seattle</option>
-                </select>
-              </div>
-            </div>
-            <div class="row submit">
-                <button
-                class="btn my-2 my-sm-0"
-                id="submit"
-                href="#"
-                type="submit"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
+        <div class="row submit">
+          <button class="btn my-2 my-sm-0" id="submit" href="#" type="submit">
+            Submit
+          </button>
         </div>
       </div>
     </div>
-    
-    <div class="container b-card-sect background-base shadow p-3 mb-5 rounded d-flex algin-content-start col-md-10">
-      {{#each result}}
-      {{> businessCards }}
-      {{/each}}
-    </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    {{> footer }}
+  </div>
+</div>
+
+<div class="container b-card-sect background-base shadow p-3 mb-5 rounded d-flex algin-content-start col-md-10">
+  {{#each result}}
+  {{> businessCards }}
+  {{/each}}
+</div>
+{{> scripts }}
+<script type="text/javascript" src="js/index.js"></script>
+{{> footer }}
