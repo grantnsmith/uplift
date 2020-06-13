@@ -66,8 +66,10 @@ module.exports = function(app) {
     db.Business.findAll({
       where: {
         CategoryID: req.params.category
-      }
+      },
+      include: [db.Category]
     }).then(result => {
+      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -78,7 +80,8 @@ module.exports = function(app) {
           address: result[i].dataValues.address,
           twitter: result[i].dataValues.twitter,
           instagram: result[i].dataValues.instagram,
-          facebook: result[i].dataValues.facebook
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
         };
         businessArray.push(addBusiness);
       }
@@ -98,6 +101,7 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
+      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -108,7 +112,8 @@ module.exports = function(app) {
           address: result[i].dataValues.address,
           twitter: result[i].dataValues.twitter,
           instagram: result[i].dataValues.instagram,
-          facebook: result[i].dataValues.facebook
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
         };
         businessArray.push(addBusiness);
       }
@@ -129,6 +134,7 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
+      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -139,7 +145,8 @@ module.exports = function(app) {
           address: result[i].dataValues.address,
           twitter: result[i].dataValues.twitter,
           instagram: result[i].dataValues.instagram,
-          facebook: result[i].dataValues.facebook
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
         };
         businessArray.push(addBusiness);
       }
