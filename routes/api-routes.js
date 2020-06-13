@@ -179,3 +179,16 @@ module.exports = function(app) {
 };
 
 // GET route for querying the CharityAPI package for relevant charities
+// app.get("/api/v1/category", (req, res) => {
+//   charitapi.v1
+//     .everything({
+//       q: "African-American",
+//       sortBy: req.params.sort,
+//       language: "en"
+//     })
+//     .then(response => {
+//       res.json(response);
+//       console.log(response)
+//     });
+// });
+// };
