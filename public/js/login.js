@@ -33,6 +33,7 @@ $(document).ready(() => {
         // If there's an error, log the error
       })
       .catch(err => {
+        alert("Incorrect username or password.");
         console.log(err);
       });
   }
