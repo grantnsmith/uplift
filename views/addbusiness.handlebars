@@ -10,79 +10,75 @@
   }
 </style>
 
-    <!-- Add a business -->
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Business Name</label>
-        <input type="email" class="form-control" id="name" aria-describedby="nameOfBusiness" placeholder="Enter a Business">
-        <small id="business" class="form-text text-muted"></small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputLocation">City</label>
-        <input type="email" class="form-control" id="city" aria-describedby="locationOfBusiness" placeholder="Enter a Business">
-        <small id="businessLocation" class="form-text text-muted"></small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Business Email</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter a Business">
-        <small id="Email" class="form-text text-muted"></small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Business Website</label>
-        <input type="password" class="form-control" id="website" placeholder="Password">
-      </div>
+<button type="submit" class="btn btn-primary" id="businessSubmitButton">Submit</button>
 
-      <div class="form-group">
-        <label for="exampleInputPassword1">Twitter</label>
-        <input type="password" class="form-control" id="twitter" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Instagram</label>
-        <input type="password" class="form-control" id="instagram" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Facebook</label>
-        <input type="password" class="form-control" id="facebook" placeholder="Password">
-      </div>
-                <div class="form-group col-md-6">
-                  <label for="business-form" class="search-words">What type of business are you looking for?</label>
-                  <select class="form-control" id="bus-type" placeholder="Business Type">
-                    <option value="0" selected>Business Type</option>
-                    <option value="1">Art Galleries</option>
-                    <option value="2">Bakeries</option>
-                    <option value="3">Bars</option>
-                    <option value="4">Beauty & Spa</option>
-                    <option value="5">Cafe</option>
-                    <option value="6">Car Dealerships</option>
-                    <option value="7">Catering</option>
-                    <option value="8">Coffee & Tea</option>
-                    <option value="9">Dessert</option>
-                    <option value="10">Event Venues</option>
-                    <option value="11">Grocery, Markets & Convenience Stores</option>
-                    <option value="12">Gyms & Yoga Studios</option>
-                    <option value="13">Hotel</option>
-                    <option value="14">Music Venues & Dance Clubs</option>
-                    <option value="15">Pet Services</option>
-                    <option value="16">Restaurants</option>
-                    <option value="17">Shopping</option>
-                    <option value="18">Wine, Beer, Spirits</option>
-                    <option value="19">Other</option>
-                    
-                  </select>
-                </div>
-      
-      <div class="form-group">
-        <label for="exampleInputEmail1">Business Social Media</label>
-        <input type="email" class="form-control" id="businessemail" aria-describedby="emailHelp" placeholder="Enter a Business">
-        <small id="businessEmail" class="form-text text-muted"></small>
-      </div>
 
-      <button type="submit" class="btn btn-primary" id="businessSubmitButton">Submit</button>
-    </form>
-  
+<!-- Add a business -->
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Business Name (Required)</label>
+    <input type="text" class="form-control" id="name" aria-describedby="nameOfBusiness" placeholder="Business Name">
+    <small id="business" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputLocation">City (Required)</label>
+    <input type="text" class="form-control" id="city" aria-describedby="locationOfBusiness" placeholder="City">
+    <small id="businessLocation" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Business Phone</label>
+    <input type="email" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Phone">
+    <small id="Email" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Business Website</label>
+    <input type="text" class="form-control" id="website" placeholder="Website">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Business Address</label>
+    <input type="text" class="form-control" id="address" placeholder="Website">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Twitter</label>
+    <input type="text" class="form-control" id="twitter" placeholder="Twitter">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Instagram</label>
+    <input type="text" class="form-control" id="instagram" placeholder="Instagram">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Facebook</label>
+    <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="business-form" class="search-words">Business Category</label>
+    <select class="form-control" id="bus-type" placeholder="Business Type">
+      <option value="0" selected>Business Type</option>
+      <option value="1">Art Galleries</option>
+      <option value="2">Bakeries</option>
+      <option value="3">Bars</option>
+      <option value="4">Beauty & Spa</option>
+      <option value="5">Cafe</option>
+      <option value="6">Car Dealerships</option>
+      <option value="7">Catering</option>
+      <option value="8">Coffee & Tea</option>
+      <option value="9">Dessert</option>
+      <option value="10">Event Venues</option>
+      <option value="11">Grocery, Markets & Convenience Stores</option>
+      <option value="12">Gyms & Yoga Studios</option>
+      <option value="13">Hotel</option>
+      <option value="14">Music Venues & Dance Clubs</option>
+      <option value="15">Pet Services</option>
+      <option value="16">Restaurants</option>
+      <option value="17">Shopping</option>
+      <option value="18">Wine, Beer, Spirits</option>
+      <option value="19">Other</option>
+
+    </select>
+  </div>
+
+</form>
+
 {{> scripts }}
-
 <script type="text/javascript" src="js/addBusinesses.js"></script>
-
-
-{{> footer }}
+{{!-- {{> footer }} --}}

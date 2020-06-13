@@ -1,55 +1,34 @@
-// Code here handles what happens when a user submits a new character on the form.
-// Effectively it takes the form inputs then sends it to the server to save in the DB.
-
 // when user clicks businessSubmitButton
 $("#businessSubmitButton").on("click", event => {
   event.preventDefault();
 
   // make a newBusiness obj
   const newBusiness = {
-    name: $("#name")
-      .val()
-      .trim(),
-    city: $("#city")
-      .val()
-      .trim(),
-
-    phone: $("#phone")
-      .val()
-      .trim(),
-    email: $("#email").val(),
+    name: $("#name").val(),
+    city: $("#city").val(),
+    phone: $("#phone").val(),
     website: $("#website").val(),
-    about: $("about").val(),
-
-    twitter: $("#twitter")
-      .val()
-      .trim(),
-    instagram: $("#instagram")
-      .val()
-      .trim(),
-    facebook: $("#facebook")
-      .val()
-      .trim()
+    address: $("#address").val(),
+    twitter: $("#twitter").val(),
+    instagram: $("#instagram").val(),
+    facebook: $("#facebook").val(),
+    CategoryId: $("#bus-type").val()
   };
 
-  // send an AJAX POST-request with jQuery
-  $.post("/api/new", newBusiness)
-    // on success, run this callback
-    .then(data => {
-      // log the data we found
-      console.log(data);
-      // tell the user we're adding a character with an alert window
-      alert("Adding business...");
+  // get the email from users session, then post the values into the database and empty each input box
+  $.get("/api/user_data").then(data => {
+    newBusiness.createdBy = data.email;
+    $.post("/api/newBusiness", newBusiness).then(() => {
+      alert(`Added ${newBusiness.name} to the database!`);
+      $("#name").val("");
+      $("#city").val("");
+      $("#phone").val("");
+      $("#website").val("");
+      $("#address").val("");
+      $("#twitter").val("");
+      $("#instagram").val("");
+      $("#facebook").val("");
+      $("#bus-type").val("0");
     });
-
-  // empty each input box by replacing the value with an empty string
-  $("#name").val("");
-  $("#city").val("");
-  $("#phone").val("");
-  $("#email").val("");
-  $("#website").val("");
-  $("#about").val("");
-  $("#twitter").val("");
-  $("#instagram").val("");
-  $("#facebook").val("");
+  });
 });

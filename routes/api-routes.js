@@ -152,7 +152,8 @@ module.exports = function(app) {
   });
 
   //POST route for saving a new business to the businesses table
-  app.post("/api/businesses", (req, res) => {
+  app.post("/api/newBusiness", (req, res) => {
+    console.log(req.body);
     db.Business.create(req.body).then(result => {
       res.json(result);
     });
