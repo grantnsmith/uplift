@@ -26,8 +26,9 @@ module.exports = function(app) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
+    } else {
+      res.render("login");
     }
-    res.render("login");
   });
 
   // If a user who is not logged in tries to access this route they will be redirected to the login page
