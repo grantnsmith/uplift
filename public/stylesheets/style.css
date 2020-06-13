@@ -20,6 +20,17 @@ form.login {
   color: #553827
 }
 
+.navbar-toggler {
+  border: solid #935934;
+  color: #553827
+}
+
+.fas {
+  justify-content: center;
+  padding-top: 4px;
+  color: #553827;
+}
+
 .btn {
   border: solid #935934;
   color: #935934;
