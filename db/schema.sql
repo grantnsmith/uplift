@@ -17,11 +17,11 @@ CREATE TABLE businesses (
    phone INT,   
    email TEXT(700),
    website TEXT(700),
-   about TEXT(700),
    address TEXT(700),
    twitter TEXT(700),
    instagram TEXT(700),
    facebook TEXT(700),
+   createdBy TEXT(250),
    category_id INT,
    PRIMARY KEY (id),
    FOREIGN KEY (category_id) REFERENCES categories(id)
