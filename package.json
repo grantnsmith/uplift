@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@handlebars/allow-prototype-access": "^1.0.3",
     "axios": "^0.19.2",
     "bcryptjs": "2.4.3",
     "dotenv": "^8.2.0",

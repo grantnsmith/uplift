@@ -25,6 +25,17 @@ form.login {
   color: #935934;
 }
 
+#loginSignUp {
+  border: solid #935934;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+#loginSignUp:hover {
+  background-color: #935934;
+  color: #FEE4D7;
+}
+
 .submit {
   justify-content: center;
   margin-bottom: 10px;

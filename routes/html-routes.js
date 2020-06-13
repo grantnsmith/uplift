@@ -1,8 +1,5 @@
-const path = require("path");
-
 // Middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-const puppeteer = require("./puppeteer.js");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -10,15 +7,19 @@ module.exports = function(app) {
   });
 
   app.get("/about", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/about.html"));
+    res.render("about");
   });
 
   app.get("/charity", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/charity.html"));
+    res.render("charity");
   });
 
   app.get("/signup", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.render("signup");
+  });
+
+  app.get("/addBusiness", isAuthenticated, (req, res) => {
+    res.render("addbusiness");
   });
 
   app.get("/login", (req, res) => {
@@ -26,21 +27,15 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render("login");
   });
 
   // If a user who is not logged in tries to access this route they will be redirected to the login page
   app.get("/members", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("members");
   });
 
   app.get("/news", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/newsAndEvents.html"));
-  });
-
-  app.get("/scrape", (req, res) => {
-    puppeteer.then(data => {
-      res.json(data);
-    });
+    res.render("newsAndEvents");
   });
 };

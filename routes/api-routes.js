@@ -3,6 +3,7 @@ const passport = require("../config/passport");
 require("dotenv").config();
 const NewsAPI = require("newsapi");
 const newsapi = new NewsAPI(process.env.NewsAPI_Key);
+const puppeteer = require("../util/scraper.js");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -67,8 +68,25 @@ module.exports = function(app) {
         CategoryID: req.params.category
       }
     }).then(result => {
-      console.log(result);
-      res.render("index", result);
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      console.log(businessObject);
+      res.render("index", businessObject);
     });
   });
 
@@ -80,7 +98,25 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
-      res.json(result);
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      console.log(businessObject);
+      res.render("index", businessObject);
     });
   });
 
@@ -93,7 +129,25 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
-      res.json(result);
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      console.log(businessObject);
+      res.render("index", businessObject);
     });
   });
 
@@ -115,6 +169,12 @@ module.exports = function(app) {
       .then(response => {
         res.json(response);
       });
+  });
+
+  app.get("/scrape/:selection", (req, res) => {
+    puppeteer(req.params.selection).then(data => {
+      res.json(data);
+    });
   });
 };
 
