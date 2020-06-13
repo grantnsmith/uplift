@@ -66,8 +66,10 @@ module.exports = function(app) {
     db.Business.findAll({
       where: {
         CategoryID: req.params.category
-      }
+      },
+      include: [db.Category]
     }).then(result => {
+      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -78,7 +80,8 @@ module.exports = function(app) {
           address: result[i].dataValues.address,
           twitter: result[i].dataValues.twitter,
           instagram: result[i].dataValues.instagram,
-          facebook: result[i].dataValues.facebook
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
         };
         businessArray.push(addBusiness);
       }
@@ -98,6 +101,7 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
+      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -108,7 +112,8 @@ module.exports = function(app) {
           address: result[i].dataValues.address,
           twitter: result[i].dataValues.twitter,
           instagram: result[i].dataValues.instagram,
-          facebook: result[i].dataValues.facebook
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
         };
         businessArray.push(addBusiness);
       }
@@ -129,6 +134,7 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
+      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -139,7 +145,8 @@ module.exports = function(app) {
           address: result[i].dataValues.address,
           twitter: result[i].dataValues.twitter,
           instagram: result[i].dataValues.instagram,
-          facebook: result[i].dataValues.facebook
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
         };
         businessArray.push(addBusiness);
       }
@@ -152,7 +159,8 @@ module.exports = function(app) {
   });
 
   //POST route for saving a new business to the businesses table
-  app.post("/api/businesses", (req, res) => {
+  app.post("/api/newBusiness", (req, res) => {
+    console.log(req.body);
     db.Business.create(req.body).then(result => {
       res.json(result);
     });
@@ -174,6 +182,33 @@ module.exports = function(app) {
   app.get("/scrape/:selection", (req, res) => {
     puppeteer(req.params.selection).then(data => {
       res.json(data);
+    });
+  });
+
+  app.get("/api/member/:email", (req, res) => {
+    db.Business.findAll({
+      where: {
+        createdBy: req.params.email
+      }
+    }).then(result => {
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      res.json(businessObject);
     });
   });
 };
