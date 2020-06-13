@@ -121,6 +121,14 @@ form.login {
   bottom: 0;
 }
 
+.foot-link {
+  color: #553827
+}
+
+.fab {
+  padding: 2px;
+}
+
 /* News and Events */
 /* ---------------------------------- */
 h1 {
