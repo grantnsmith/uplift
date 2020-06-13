@@ -7,20 +7,27 @@ $("#businessSubmitButton").on("click", event => {
 
   // make a newBusiness obj
   const newBusiness = {
-    // name from name input
     name: $("#name")
       .val()
       .trim(),
-    // role from role input
-    role: $("#role")
+    city: $("#city")
       .val()
       .trim(),
-    // age from age input
-    age: $("#age")
+
+    phone: $("#phone")
       .val()
       .trim(),
-    // points from force-points input
-    forcePoints: $("#force-points")
+    email: $("#email").val(),
+    website: $("#website").val(),
+    about: $("about").val(),
+
+    twitter: $("#twitter")
+      .val()
+      .trim(),
+    instagram: $("#instagram")
+      .val()
+      .trim(),
+    facebook: $("#facebook")
       .val()
       .trim()
   };
@@ -37,7 +44,12 @@ $("#businessSubmitButton").on("click", event => {
 
   // empty each input box by replacing the value with an empty string
   $("#name").val("");
-  $("#role").val("");
-  $("#age").val("");
-  $("#force-points").val("");
+  $("#city").val("");
+  $("#phone").val("");
+  $("#email").val("");
+  $("#website").val("");
+  $("#about").val("");
+  $("#twitter").val("");
+  $("#instagram").val("");
+  $("#facebook").val("");
 });

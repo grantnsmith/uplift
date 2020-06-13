@@ -19,7 +19,11 @@ module.exports = function(sequelize, DataTypes) {
     address: DataTypes.TEXT,
     twitter: DataTypes.TEXT,
     instagram: DataTypes.TEXT,
-    facebook: DataTypes.TEXT
+    facebook: DataTypes.TEXT,
+    createdBy: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   });
 
   Business.associate = function(models) {

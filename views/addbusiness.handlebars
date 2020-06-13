@@ -18,7 +18,7 @@
         <small id="business" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
-        <label for="exampleInputLocation">Location</label>
+        <label for="exampleInputLocation">City</label>
         <input type="email" class="form-control" id="city" aria-describedby="locationOfBusiness" placeholder="Enter a Business">
         <small id="businessLocation" class="form-text text-muted"></small>
       </div>
@@ -31,90 +31,46 @@
         <label for="exampleInputPassword1">Business Website</label>
         <input type="password" class="form-control" id="website" placeholder="Password">
       </div>
+
       <div class="form-group">
-        <label for="exampleInputPassword1">Tell Us About This Business</label>
-        <input type="password" class="form-control" id="about" placeholder="Password">
+        <label for="exampleInputPassword1">Twitter</label>
+        <input type="password" class="form-control" id="twitter" placeholder="Password">
       </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Art Galleries</label>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Instagram</label>
+        <input type="password" class="form-control" id="instagram" placeholder="Password">
       </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Bakeries</label>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Facebook</label>
+        <input type="password" class="form-control" id="facebook" placeholder="Password">
       </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Bars</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Beauty & Spa</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Cafe</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Car Dealerships</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Catering</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Coffee & Tea</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Dessert</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Event Venues</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Food Trucks</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Grocery, Markets & Convenience Stores</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Gyms & Yoga Studios</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Hotel</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Music Venues & Dance Clubs</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Pet Services</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Restaurants</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Shopping</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Wine, Beer, Spirits</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Other</label>
-      </div>
+                <div class="form-group col-md-6">
+                  <label for="business-form" class="search-words">What type of business are you looking for?</label>
+                  <select class="form-control" id="bus-type" placeholder="Business Type">
+                    <option value="0" selected>Business Type</option>
+                    <option value="1">Art Galleries</option>
+                    <option value="2">Bakeries</option>
+                    <option value="3">Bars</option>
+                    <option value="4">Beauty & Spa</option>
+                    <option value="5">Cafe</option>
+                    <option value="6">Car Dealerships</option>
+                    <option value="7">Catering</option>
+                    <option value="8">Coffee & Tea</option>
+                    <option value="9">Dessert</option>
+                    <option value="10">Event Venues</option>
+                    <option value="11">Grocery, Markets & Convenience Stores</option>
+                    <option value="12">Gyms & Yoga Studios</option>
+                    <option value="13">Hotel</option>
+                    <option value="14">Music Venues & Dance Clubs</option>
+                    <option value="15">Pet Services</option>
+                    <option value="16">Restaurants</option>
+                    <option value="17">Shopping</option>
+                    <option value="18">Wine, Beer, Spirits</option>
+                    <option value="19">Other</option>
+                    
+                  </select>
+                </div>
+      
       <div class="form-group">
         <label for="exampleInputEmail1">Business Social Media</label>
         <input type="email" class="form-control" id="businessemail" aria-describedby="emailHelp" placeholder="Enter a Business">
@@ -124,9 +80,9 @@
       <button type="submit" class="btn btn-primary" id="businessSubmitButton">Submit</button>
     </form>
   
-
-
-<script> src = "./js/addBusinessess.js"</script>
-
 {{> scripts }}
+
+<script type="text/javascript" src="js/addBusinesses.js"></script>
+
+
 {{> footer }}
