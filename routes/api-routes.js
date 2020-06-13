@@ -184,6 +184,33 @@ module.exports = function(app) {
       res.json(data);
     });
   });
+
+  app.get("/api/member/:email", (req, res) => {
+    db.Business.findAll({
+      where: {
+        createdBy: req.params.email
+      }
+    }).then(result => {
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      res.json(businessObject);
+    });
+  });
 };
 
 // GET route for querying the CharityAPI package for relevant charities
