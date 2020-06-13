@@ -25,6 +25,13 @@ form.login {
   color: #553827
 }
 
+.index-sect {
+  margin-bottom: 5px;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .fas {
   justify-content: center;
   padding-top: 4px;
