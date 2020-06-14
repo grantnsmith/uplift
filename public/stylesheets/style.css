@@ -19,8 +19,18 @@ form.login {
   margin-bottom: 30px;
 }
 
+.navbar-brand {
+  font-family: 'Philosopher', sans-serif;
+  color: #553827;
+  -webkit-text-stroke: 1px #935934;
+  font-size: 30px;
+  margin-left: 5px;
+}
+
 .nav-link {
   color: #935934;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
 }
 
 .nav-link:hover {
