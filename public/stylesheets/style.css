@@ -3,23 +3,17 @@ form.login {
   margin-top: 50px;
 }
 
-/* .bg {
-  background-image: url("public/assets/bg1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  margin: 0;
-} */
-
-.bg {
-  background-color: #553827;
-}
-
-.index {
+.btn:hover {
   background-color: #935934;
+  color: #FEE4D7;
 }
 
+.background-base {
+  background-color: #E6A17D;
+  border: solid #553827;
+}
+
+/* navbar */
 .navbar {
   background-color: #FEE4D7;
   margin-bottom: 30px;
@@ -38,6 +32,26 @@ form.login {
   color: #553827
 }
 
+#loginSignUp {
+  border: solid #935934;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+#loginSignUp:hover {
+  background-color: #935934;
+  color: #FEE4D7;
+}
+
+
+
+.dropdown-menu,
+.btn {
+  border: solid #935934;
+  color: #935934;
+}
+
+/* index */
 .index-sect {
   margin-bottom: 5px;
   justify-content: center;
@@ -51,36 +65,9 @@ form.login {
   color: #553827;
 }
 
-.dropdown-menu,
-.btn {
-  border: solid #935934;
-  color: #935934;
-}
-
-#loginSignUp {
-  border: solid #935934;
-  padding: 5px;
-  border-radius: 25px;
-}
-
-#loginSignUp:hover {
-  background-color: #935934;
-  color: #FEE4D7;
-}
-
 .submit {
   justify-content: center;
   margin-bottom: 10px;
-}
-
-.btn:hover {
-  background-color: #935934;
-  color: #FEE4D7;
-}
-
-.background-base {
-  background-color: #E6A17D;
-  border: solid #553827;
 }
 
 .sPhrase {
@@ -116,6 +103,7 @@ form.login {
   justify-content: center;
 }
 
+/* about */
 .about-sect {
   justify-content: center;
   padding-top: 10px;
@@ -131,6 +119,7 @@ form.login {
   justify-content: center;
 }
 
+/* footer */
 .footer {
   text-align: center;
   background-color: #FEE4D7;
