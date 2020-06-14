@@ -3,17 +3,34 @@ form.login {
   margin-top: 50px;
 }
 
-.index {
+.btn:hover {
   background-color: #935934;
+  color: #FEE4D7;
 }
 
+.background-base {
+  background-color: #E6A17D;
+  border: solid #553827;
+}
+
+/* navbar */
 .navbar {
   background-color: #FEE4D7;
   margin-bottom: 30px;
 }
 
+.navbar-brand {
+  font-family: 'Philosopher', sans-serif;
+  color: #553827;
+  -webkit-text-stroke: 1px #935934;
+  font-size: 30px;
+  margin-left: 5px;
+}
+
 .nav-link {
   color: #935934;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
 }
 
 .nav-link:hover {
@@ -23,24 +40,6 @@ form.login {
 .navbar-toggler {
   border: solid #935934;
   color: #553827
-}
-
-.index-sect {
-  margin-bottom: 5px;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.fas {
-  justify-content: center;
-  padding-top: 4px;
-  color: #553827;
-}
-
-.btn {
-  border: solid #935934;
-  color: #935934;
 }
 
 #loginSignUp {
@@ -54,18 +53,31 @@ form.login {
   color: #FEE4D7;
 }
 
+
+
+.dropdown-menu,
+.btn {
+  border: solid #935934;
+  color: #935934;
+}
+
+/* index */
+.index-sect {
+  margin-bottom: 5px;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.fas {
+  justify-content: center;
+  padding-top: 4px;
+  color: #553827;
+}
+
 .submit {
   justify-content: center;
   margin-bottom: 10px;
-}
-
-.btn:hover {
-  background-color: #935934;
-  color: #FEE4D7;
-}
-
-.background-base {
-  background-color: #E6A17D;
 }
 
 .sPhrase {
@@ -101,6 +113,7 @@ form.login {
   justify-content: center;
 }
 
+/* about */
 .about-sect {
   justify-content: center;
   padding-top: 10px;
@@ -116,6 +129,7 @@ form.login {
   justify-content: center;
 }
 
+/* footer */
 .footer {
   text-align: center;
   background-color: #FEE4D7;
