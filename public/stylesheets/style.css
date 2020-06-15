@@ -53,8 +53,6 @@ form.login {
   color: #FEE4D7;
 }
 
-
-
 .dropdown-menu,
 .btn {
   border: solid #935934;
@@ -140,6 +138,7 @@ form.login {
   position: fixed;
   left: 0;
   bottom: 0;
+  border-top: solid 2px #553827;
 }
 
 .foot-link {
@@ -154,7 +153,7 @@ form.login {
 /* ---------------------------------- */
 h1 {
   margin-bottom: 1.5rem;
-  color: #4A5568;
+  color: #553827;
 }
 
 h1:hover {
@@ -162,17 +161,22 @@ h1:hover {
 }
 
 #dropdownMenuButton {
-  background-color: #EDF2F7;
-  border: solid #4A5568 1px;
-  color: #2B6CB0;
+  border: solid #553827 1px;
+  color: #935934;
+}
+
+#dropdownMenuButton:hover {
+  background-color: #935934;
+  color: #FEE4D7;
 }
 
 .article-image {
   width: 6rem;
+  border-radius: 10px;
 }
 
 .article-title {
-  color: #2B6CB0;
+  color: #935934;
   font-weight: bold;
 }
 
@@ -191,9 +195,15 @@ h1:hover {
   color: #A0AEC0;
 }
 
+.media {
+  background-color: #FEE4D7;
+  padding: 5px;
+  border-radius: 10px;
+}
+
 .calendar-box {
   width: 20%;
-  background-color: #2D3748;
+  background-color: #553827;
   color: white;
   margin-right: 2rem;
   border-radius: 8%;
