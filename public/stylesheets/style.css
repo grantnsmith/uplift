@@ -5,22 +5,22 @@ form.login {
 
 .btn:hover {
   background-color: #935934;
-  color: #FEE4D7;
+  color: #fee4d7;
 }
 
 .background-base {
-  background-color: #E6A17D;
+  background-color: #e6a17d;
   border: solid #553827;
 }
 
 /* navbar */
 .navbar {
-  background-color: #FEE4D7;
+  background-color: #fee4d7;
   margin-bottom: 30px;
 }
 
 .navbar-brand {
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
   color: #553827;
   -webkit-text-stroke: 1px #935934;
   font-size: 30px;
@@ -29,28 +29,28 @@ form.login {
 
 .nav-link {
   color: #935934;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
   font-weight: 400;
 }
 
 .nav-link:hover {
-  color: #553827
+  color: #553827;
 }
 
 .navbar-toggler {
   border: solid #935934;
-  color: #553827
+  color: #553827;
 }
 
 #loginSignUp {
   border: solid #935934;
   padding: 5px;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 #loginSignUp:hover {
   background-color: #935934;
-  color: #FEE4D7;
+  color: #fee4d7;
 }
 
 .dropdown-menu,
@@ -60,11 +60,22 @@ form.login {
 }
 
 /* index */
-.index-sect {
+/* .bg {
+  background-image: url(../assets/kneel2.jpg);
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   margin-bottom: 5px;
+} */
+
+.index-sect {
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  /* position: absolute;
+  bottom: 0;
+  right: 90px */
 }
 
 .fas {
@@ -81,7 +92,7 @@ form.login {
 .sPhrase {
   text-align: center;
   justify-content: center;
-  color: #553827
+  color: #553827;
 }
 
 .search-card {
@@ -90,7 +101,7 @@ form.login {
 
 .search-card-c {
   justify-content: center;
-  background-color: #FEE4D7;
+  background-color: #fee4d7;
 }
 
 .search-words {
@@ -98,7 +109,7 @@ form.login {
 }
 
 .b-card-sect {
-  background-color: #E6A17D;
+  background-color: #e6a17d;
 }
 
 .b-card {
@@ -120,7 +131,7 @@ form.login {
 
 .about-card-sect {
   justify-content: center;
-  background-color: #FEE4D7;
+  background-color: #fee4d7;
 }
 
 .about-body {
@@ -130,7 +141,7 @@ form.login {
 /* footer */
 .footer {
   text-align: center;
-  background-color: #FEE4D7;
+  background-color: #fee4d7;
   color: #553827;
   /* margin-top: 40px; */
   padding: 10px;
@@ -142,7 +153,7 @@ form.login {
 }
 
 .foot-link {
-  color: #553827
+  color: #553827;
 }
 
 .fab {
@@ -167,7 +178,7 @@ h1:hover {
 
 #dropdownMenuButton:hover {
   background-color: #935934;
-  color: #FEE4D7;
+  color: #fee4d7;
 }
 
 .article-image {
@@ -181,22 +192,23 @@ h1:hover {
 }
 
 .article-date {
-  color: #A0AEC0;
+  color: #a0aec0;
   font-size: small;
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
 
 .article-description {
-  color: #2D3748;
+  color: #2d3748;
 }
 
-.article-link, .fas {
-  color: #A0AEC0;
+.article-link,
+.fas {
+  color: #a0aec0;
 }
 
 .media {
-  background-color: #FEE4D7;
+  background-color: #fee4d7;
   padding: 5px;
   border-radius: 10px;
 }
