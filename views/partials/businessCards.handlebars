@@ -1,17 +1,16 @@
  <div id="business-card"></div>
       <div class="row b-card col-md-4">
         <div class="card" style="width: 18rem;">
-          <img src="{{imageURL}}" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h3 class="business-name">{{name}}</h3>
+          <h3 class="business-name">{{name}}</h3>
             <div>
             <ul style="list-style-type:none; padding: 0;">
-            <li class="card-text">{{city}}</li>
-            <li class="card-text">{{address}}</li>
-            <li class="card-text">{{phone}}</li>
-            <li class="card-text">{{twitter}}</li>
-            <li class="card-text">{{instagram}}</li>
-            <li class="card-text">{{facebook}}</li>
+            <li class="card-text"><a href="https://www.google.com/maps/search/?api=1&query={{address}}" target="_blank">{{address}}</a></li>
+            <li class="card-text"><a href="{{website}}" target="_blank">Website</a></li>
+            <li class="card-text"><a href="tel:{{phone}}">Call Us!</a></li>
+            <li class="card-text"><a href="{{twitter}}" target="_blank">Twitter</a></li>
+            <li class="card-text"><a href="{{instagram}}" target="_blank">Instagram</a></li>
+            <li class="card-text"><a href="{{facebook}}" target="_blank">Facebook</a></li>
             </ul>
             </div>
           </div>
