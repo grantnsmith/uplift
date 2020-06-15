@@ -4,6 +4,7 @@ require("dotenv").config();
 const NewsAPI = require("newsapi");
 const newsapi = new NewsAPI(process.env.NewsAPI_Key);
 const puppeteer = require("../util/scraper.js");
+const axios = require("axios");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -69,7 +70,6 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
-      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -88,7 +88,6 @@ module.exports = function(app) {
       const businessObject = {
         business: businessArray
       };
-      console.log(businessObject);
       res.render("index", businessObject);
     });
   });
@@ -101,7 +100,6 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
-      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -120,7 +118,6 @@ module.exports = function(app) {
       const businessObject = {
         business: businessArray
       };
-      console.log(businessObject);
       res.render("index", businessObject);
     });
   });
@@ -134,7 +131,6 @@ module.exports = function(app) {
       },
       include: [db.Category]
     }).then(result => {
-      console.log(result);
       const businessArray = [];
       for (let i = 0; i < result.length; i++) {
         const addBusiness = {
@@ -153,14 +149,12 @@ module.exports = function(app) {
       const businessObject = {
         business: businessArray
       };
-      console.log(businessObject);
       res.render("index", businessObject);
     });
   });
 
   //POST route for saving a new business to the businesses table
   app.post("/api/newBusiness", (req, res) => {
-    console.log(req.body);
     db.Business.create(req.body).then(result => {
       res.json(result);
     });
@@ -179,12 +173,14 @@ module.exports = function(app) {
       });
   });
 
+  // Uses puppeteer utility function scrape Eventbrite events based off today, week, or month selection
   app.get("/scrape/:selection", (req, res) => {
     puppeteer(req.params.selection).then(data => {
       res.json(data);
     });
   });
 
+  // Finds businesses created by the user session identified by their email login
   app.get("/api/member/:email", (req, res) => {
     db.Business.findAll({
       where: {
@@ -211,19 +207,24 @@ module.exports = function(app) {
       res.json(businessObject);
     });
   });
-};
 
-// GET route for querying the CharityAPI package for relevant charities
-// app.get("/api/v1/category", (req, res) => {
-//   charitapi.v1
-//     .everything({
-//       q: "African-American",
-//       sortBy: req.params.sort,
-//       language: "en"
-//     })
-//     .then(response => {
-//       res.json(response);
-//       console.log(response)
-//     });
-// });
-// };
+  // Queries charityapi.orghunter.com API and returns response in JSON
+  app.get("/api/charities", (req, res) => {
+    const config = {
+      headers: {
+        "X-Requested-With": "XMLHttpRequest"
+      }
+    };
+    axios
+      .get(
+        `https://cors-anywhere.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=${process.env.CharityAPI_Key}&category=R&searchTerm=african%20american`,
+        config
+      )
+      .then(response => {
+        res.json(response.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+};
