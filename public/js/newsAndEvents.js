@@ -44,7 +44,7 @@ $(() => {
   // When "News" is clicked, make font bolder and display the news
   $("#news-header").on("click", () => {
     updateSortButton("news");
-    $("#news-header").css("color", "#4A5568");
+    $("#news-header").css("color", "#553827");
     $("#events-header").css("color", "#CBD5E0");
     displayNews("popularity");
   });
@@ -78,7 +78,7 @@ $(() => {
   // When "Events" is clicked, make font bolder and display the scraped events for a week by default
   $("#events-header").on("click", () => {
     updateSortButton("events");
-    $("#events-header").css("color", "#4A5568");
+    $("#events-header").css("color", "#553827");
     $("#news-header").css("color", "#CBD5E0");
     renderHTML(eventsWeek);
   });
