@@ -105,6 +105,7 @@ form.login {
 
 .search-card {
   justify-content: center;
+  padding: 10px;
 }
 
 .search-card-c {
@@ -114,6 +115,7 @@ form.login {
 
 .search-words {
   color: #553827;
+  padding-top: 5px;
 }
 
 .b-card-sect {
@@ -277,4 +279,20 @@ h1:hover {
 
 .address-link {
   color: #a0aec0;
+}
+
+#business-icon {
+  color: #808080;
+}
+
+#business-search {
+  margin-top: 15px;
+}
+
+#index-title {
+  color: #935934;
+  font-family: "Philosopher", sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
 }
