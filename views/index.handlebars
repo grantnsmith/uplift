@@ -15,7 +15,7 @@
   <div class="alert" role="alert">
     <div class="row sPhrase">
       <div>
-        Don't Just Talk About It, Be About It! Support Black Owned Business!
+        <h3>Don't Just Talk About It, Be About It! Support Black Owned Business!</h3>
       </div>
     </div>
     <div class="row search-card">
@@ -64,10 +64,12 @@
   </div>
 </div>
 
-<div class="container b-card-sect mb-5 rounded d-flex algin-content-start col-md-10">
+<div class="container-fluid">
+<div class="row row-col-1 row-cols-md-2">
   {{#each business}}
   {{> businessCards }}
   {{/each}}
+</div>
 </div>
 {{> scripts }}
 <script type="text/javascript" src="js/index.js"></script>
