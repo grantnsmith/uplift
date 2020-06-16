@@ -274,3 +274,7 @@ h1:hover {
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
+
+.address-link {
+  color: #a0aec0;
+}
