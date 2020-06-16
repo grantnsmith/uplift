@@ -1,19 +1,12 @@
-/* eslint-disable indent */
-/* eslint-disable no-var */
-/* eslint-disable prettier/prettier */
-/* eslint-disable semi */
-
 // On page load, call API and append cards for each
-getApiCall();
-
 function getApiCall() {
   $.ajax({
     type: "GET",
     url: "/api/charities"
   })
-  .then(response => {
-    for (let i = 0; i < 20; i++) {
-      const charityCardHTML = `
+    .then(response => {
+      for (let i = 0; i < 20; i++) {
+        const charityCardHTML = `
       <div class="col mb-4">
         <div class="card">
           <div class="card-body" id="charCard">
@@ -22,9 +15,15 @@ function getApiCall() {
             <p class="card-text">${response.data[i].city}, ${response.data[i].state}</p>
           </div>
         </div>
-      </div>`
-      $("#append-charities").append(charityCardHTML);
-    }
-
-  });
+      </div>`;
+        $("#append-charities").append(charityCardHTML);
+      }
+    })
+    .catch(error => {
+      console.log(error.response);
+    });
 }
+
+getApiCall();
+
+// ReferenceError (value or reference can be passed in js, passing )
