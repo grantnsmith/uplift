@@ -3,6 +3,14 @@ form.login {
   margin-top: 50px;
 }
 
+.page {
+  position: relative;
+}
+
+.content {
+  padding-bottom: 2.5rem
+}
+
 .btn:hover {
   background-color: #935934;
   color: #fee4d7;
@@ -143,13 +151,14 @@ form.login {
   text-align: center;
   background-color: #fee4d7;
   color: #553827;
-  /* margin-top: 40px; */
+  /* margin-top: 10px; */
   padding: 10px;
   width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
   border-top: solid 2px #553827;
+  height: 2.5rem;
 }
 
 .foot-link {
@@ -229,3 +238,23 @@ h1:hover {
 }
 /* ---------------------------------- */
 /* News and Events */
+
+#charCard {
+  background-color: #fee4d7;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+.charText {
+  color: #553827
+}
+
+.charHead {
+  text-align: center;
+}
+
+.card-title,
+.card-text {
+  color: #553827
+}
