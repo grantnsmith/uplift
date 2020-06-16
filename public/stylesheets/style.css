@@ -258,3 +258,19 @@ h1:hover {
 .card-text {
   color: #553827
 }
+
+/* Index Cards */
+
+.business-address {
+  color: #a0aec0;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.business-card-text {
+  color: #935934;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}

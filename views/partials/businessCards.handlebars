@@ -1,19 +1,19 @@
- <div id="business-card"></div>
-      <div class="row b-card col-md-4">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-          <h3 class="business-name">{{name}}</h3>
-            <div>
-            <ul style="list-style-type:none; padding: 0;">
-            <li class="card-text"><a href="https://www.google.com/maps/search/?api=1&query={{address}}" target="_blank">{{address}}</a></li>
-            <li class="card-text"><a href="{{website}}" target="_blank">Website</a></li>
-            <li class="card-text"><a href="tel:{{phone}}">Call Us!</a></li>
-            <li class="card-text"><a href="{{twitter}}" target="_blank">Twitter</a></li>
-            <li class="card-text"><a href="{{instagram}}" target="_blank">Instagram</a></li>
-            <li class="card-text"><a href="{{facebook}}" target="_blank">Facebook</a></li>
-            </ul>
-            </div>
-          </div>
-        </div>
+<div class="col mb-4">
+  <ul class="list-unstyled">
+    <li class="media">
+      <div class="media-body b-card">
+        <h3 class="mt-0 mb-1 business-name article-title"><i class="fas fa-cookie-bite"></i> {{name}}</h3>
+        <p class="business-address"><a href="https://www.google.com/maps/search/?api=1&query={{address}}"
+            target="_blank">{{address}}</a></p>
+        <p class="business-card-text"><a href="{{website}}" target="_blank">Check out our Website</a> | 
+        <a href="tel:{{phone}}">Call Us</a> | Follow us:
+        <a href="{{twitter}}" target="_blank">Twitter</a> |
+        <a href="{{instagram}}" target="_blank">Instagram</a> |
+        <a href="{{facebook}}" target="_blank">Facebook</a>
+        </p>
       </div>
-      
+    </li>
+  </ul>
+</div>
+
+{{!-- ADD {{imageURL}} to h2 once it's been added to database --}}
