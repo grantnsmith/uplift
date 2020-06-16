@@ -12,7 +12,12 @@ Uplift is a command-line-interface (CLI) application that aims to support Black-
 vicinity/ neighborhood or anywhere else. The application is intended to be a resource for business owners as well as consumers who are searching to support
 this community. The visitor to the website can make an account and add a business. 
 
-This project has given us the opportunity to learn about continuous integration services, like Travis CI, MVC (model,view, controller) organizational tool, 
+This project has given us the opportunity to learn about continuous integration services, like Travis CI, MVC (model,view, controller) organizational tool, as well as 
+using handlebars. 
+
+Through our application, we want to continue the conversaton about civil rights. It was created at the time of the 2020 protests against police brutality and was inpsired by the changes made by those who were speaking up and standing up for Black communities. We recognized 
+that the movement extends far beyond police brutality and encompasses decades of racial injustices and we want a continual resource 
+for the Black communitities and their allies to use as a tool of betterment.
 
 
 ## Table of Contents
