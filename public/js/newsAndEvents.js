@@ -14,10 +14,13 @@ $(() => {
     $.get("/scrape/" + sortSelection).then(data => {
       if (sortSelection === "today") {
         eventsToday = data;
+        return;
       } else if (sortSelection === "week") {
         eventsWeek = data;
+        return;
       } else if (sortSelection === "month") {
         eventsMonth = data;
+        return;
       }
     });
   }
@@ -28,7 +31,6 @@ $(() => {
     $("#dropdownMenuButton").text($(this).text());
     const currentState = $("#dropdownMenuButton").data("state");
     const sortSelection = $(this).data("sort");
-    console.log(sortSelection);
 
     if (currentState === "news") {
       displayNews(sortSelection);
@@ -60,7 +62,7 @@ $(() => {
         const newArticle = `
           <ul class="list-unstyled">
             <li class="media">
-              <img src=${response.articles[i].urlToImage} class="mr-3 article-image" alt="Missing Article Image">
+              <img src=${response.articles[i].urlToImage} class="mr-3 article-image" alt="No Article Image">
               <div class="media-body">
                 <h5 class="mt-0 mb-1 article-title">${response.articles[i].title}</h5>
                 <p class="article-date">${articleDate}</p>
