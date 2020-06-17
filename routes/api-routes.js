@@ -1,8 +1,6 @@
 const db = require("../models");
 const passport = require("../config/passport");
 require("dotenv").config();
-const NewsAPI = require("newsapi");
-const newsapi = new NewsAPI(process.env.NewsAPI_Key);
 const puppeteer = require("../util/scraper.js");
 const axios = require("axios");
 
@@ -162,14 +160,15 @@ module.exports = function(app) {
 
   //GET route for querying the NewsAPI package for articles
   app.get("/api/news/:sort", (req, res) => {
-    newsapi.v2
-      .everything({
-        q: "blm",
-        sortBy: req.params.sort,
-        language: "en"
-      })
+    axios
+      .get(
+        `https://newsapi.org/v2/everything?q=blm&apiKey=${process.env.NewsAPI_Key}&language=en&sortBy=${req.params.sort}`
+      )
       .then(response => {
-        res.json(response);
+        res.json(response.data);
+      })
+      .catch(err => {
+        console.log(err);
       });
   });
 
