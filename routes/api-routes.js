@@ -174,8 +174,8 @@ module.exports = function(app) {
   });
 
   // Uses puppeteer utility function scrape Eventbrite events based off today, week, or month selection
-  app.get("/scrape/:selection", (req, res) => {
-    puppeteer(req.params.selection).then(data => {
+  app.get("/scrape/", (req, res) => {
+    puppeteer.then(data => {
       res.json(data);
     });
   });
