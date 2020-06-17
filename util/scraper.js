@@ -1,18 +1,8 @@
 const puppeteer = require("puppeteer");
 
-async function scrape(selection = "week") {
-  let url =
-    "https://www.eventbrite.com/d/online/events--this-week/black-lives-matter/?lang=en&page=1";
-  if (selection === "today") {
-    url =
-      "https://www.eventbrite.com/d/online/events--today/black-lives-matter/?page=1&lang=en";
-  } else if (selection === "week" || selection === undefined) {
-    url =
-      "https://www.eventbrite.com/d/online/events--this-week/black-lives-matter/?lang=en&page=1";
-  } else if (selection === "month") {
-    url =
-      "https://www.eventbrite.com/d/online/events--this-month/black-lives-matter/?lang=en&page=1";
-  }
+async function scrape() {
+  const url =
+    "https://www.eventbrite.com/d/online/events--this-month/black-lives-matter/?lang=en&page=1";
 
   const browser = await puppeteer.launch({
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
@@ -70,4 +60,4 @@ async function scrape(selection = "week") {
   return data;
 }
 
-module.exports = scrape;
+module.exports = scrape();

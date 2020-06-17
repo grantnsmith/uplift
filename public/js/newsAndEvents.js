@@ -1,28 +1,13 @@
 $(() => {
-  let eventsToday = [];
-  let eventsWeek = [];
-  let eventsMonth = [];
   // On page load, display the news, scrape events, and save events by filter
   displayNews("popularity");
   $("#events-header").css("color", "#CBD5E0");
-  getScrape("today");
-  getScrape("week");
-  getScrape("month");
 
   // AJAX call to perform scrape server side, parameter passed in for filter
-  function getScrape(sortSelection) {
-    $.get("/scrape/" + sortSelection)
+  function getScrape() {
+    $.get("/scrape/")
       .then(data => {
-        if (sortSelection === "today") {
-          eventsToday = data;
-          return;
-        } else if (sortSelection === "week") {
-          eventsWeek = data;
-          return;
-        } else if (sortSelection === "month") {
-          eventsMonth = data;
-          return;
-        }
+        renderHTML(data);
       })
       .catch(err => {
         console.log(err);
@@ -33,23 +18,13 @@ $(() => {
   $(document).on("click", ".dropdown-item", function(event) {
     event.preventDefault();
     $("#dropdownMenuButton").text($(this).text());
-    const currentState = $("#dropdownMenuButton").data("state");
     const sortSelection = $(this).data("sort");
-
-    if (currentState === "news") {
-      displayNews(sortSelection);
-    } else if (sortSelection === "today") {
-      renderHTML(eventsToday);
-    } else if (sortSelection === "week") {
-      renderHTML(eventsWeek);
-    } else if (sortSelection === "month") {
-      renderHTML(eventsMonth);
-    }
+    displayNews(sortSelection);
   });
 
   // When "News" is clicked, make font bolder and display the news
   $("#news-header").on("click", () => {
-    updateSortButton("news");
+    $("#dropdownMenuButton").show();
     $("#news-header").css("color", "#553827");
     $("#events-header").css("color", "#CBD5E0");
     displayNews("popularity");
@@ -87,18 +62,14 @@ $(() => {
 
   // When "Events" is clicked, make font bolder and display the scraped events for a week by default
   $("#events-header").on("click", () => {
-    updateSortButton("events");
+    $("#dropdownMenuButton").hide();
     $("#events-header").css("color", "#553827");
     $("#news-header").css("color", "#CBD5E0");
-    renderHTML(eventsWeek);
+    getScrape();
   });
 
   // Append 10 scraped events to HTML, alert if data is 0 as scrape still in progress
   function renderHTML(data) {
-    if (data.length === 0) {
-      alert("Events still loading..");
-      return;
-    }
     $(".list-unstyled").remove();
     for (let i = 0; i < data.length; i++) {
       let date = data[i].date;
@@ -121,32 +92,6 @@ $(() => {
       </ul>`;
 
       $(".append-newsAndEvents").append(newListItem);
-    }
-  }
-
-  // Sort button menu changes based off whether news or events are displayed
-  function updateSortButton(requested) {
-    const currentState = $("#dropdownMenuButton").data("state");
-    if (requested === currentState) {
-      return;
-    }
-
-    $("#dropdownMenuButton").text("Sort By");
-
-    let textArray = [];
-    let dataArray = [];
-    if (requested === "news") {
-      textArray = ["Most Recent", "Most Popular", "Most Relevant"];
-      dataArray = ["publishedAt", "popularity", "relevancy"];
-    } else {
-      textArray = ["Today", "This Week", "This Month"];
-      dataArray = ["today", "week", "month"];
-    }
-
-    $("#dropdownMenuButton").data("state", requested);
-    for (let i = 0; i < 3; i++) {
-      $("#drop-" + i).text(textArray[i]);
-      $("#drop-" + i).data("sort", dataArray[i]);
     }
   }
 });
