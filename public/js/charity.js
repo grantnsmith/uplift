@@ -25,5 +25,3 @@ function getApiCall() {
 }
 
 getApiCall();
-
-// ReferenceError (value or reference can be passed in js, passing )

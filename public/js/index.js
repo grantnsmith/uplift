@@ -9,7 +9,7 @@ $(document).ready(() => {
     const category = parseInt(businessType.val());
     const city = cityName.val();
     if (city === null && category === 0) {
-      alert("You must make at least one selection in order to search.")
+      alert("You must make at least one selection in order to search.");
     } else if (city === null && category > 0) {
       getBusinessesByCategory(category);
     } else if (city !== null && category === 0) {
