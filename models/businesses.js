@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    phone: DataTypes.INTEGER,
+    phone: DataTypes.TEXT,
     website: DataTypes.TEXT,
     address: DataTypes.TEXT,
     twitter: DataTypes.TEXT,
