@@ -62,12 +62,13 @@
             <label for="business-form" class="search-words">Where are you located?</label>
             <select class="form-control" id="city-name" placeholder="City">
               <option value="0" selected disabled>City...</option>
-              <option value="seattle">Seattle</option>
+              <option value="seattle">Seattle, WA</option>
+              <option value="monterey">Monterey, CA</option>
             </select>
           </div>
         </div>
         <div class="row submit">
-          <button class="btn my-2 my-sm-0" id="submit" href="#" type="submit">
+          <button class="btn my-2 my-sm-0" id="submit" href="#index-business-cards" type="submit">
             Submit
           </button>
         </div>
@@ -77,12 +78,21 @@
 </div>
 
 <div class="container-fluid">
-<div class="row row-col-1 row-cols-md-2">
+<div id="index-business-cards" class="row row-col-1 row-cols-md-2">
   {{#each business}}
   {{> businessCards }}
   {{/each}}
 </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div></div>
 {{> scripts }}
 <script type="text/javascript" src="js/index.js"></script>
 {{> footer }}

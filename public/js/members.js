@@ -9,9 +9,8 @@ $(document).ready(() => {
       } else {
         for (let i = 0; i < result.business.length; i++) {
           const newCard = `
-          <div id="business-card"></div>
-            <div class="b-card col-md-4">
-              <div class="card" style="width: 18rem;">
+            <div class="b-card col-sm media">
+              <div class="card" style="width: 60rem;">
                 <div class="card-body">
                   <h3 class="business-name">${result.business[i].name}</h3>
                   <div>
@@ -19,16 +18,15 @@ $(document).ready(() => {
                       <li class="card-text">City: ${result.business[i].city}</li>
                       <li class="card-text">Address: ${result.business[i].address}</li>
                       <li class="card-text">Phone: ${result.business[i].phone}</li>
-                      <li class="card-text">Twitter: ${result.business[i].twitter}</li>
-                      <li class="card-text">Instagram: ${result.business[i].instagram}</li>
-                      <li class="card-text">Facebook: ${result.business[i].facebook}</li>
+                      <li class="card-text">Twitter: <a href=${result.business[i].twitter} target="_blank">${result.business[i].twitter}</a></li>
+                      <li class="card-text">Instagram: <a href=${result.business[i].instagram} target="_blank">${result.business[i].instagram}</a></li>
+                      <li class="card-text">Facebook: <a href=${result.business[i].facebook} target="_blank">${result.business[i].facebook}</a></li>
                       <li class="card-text">Website: <a href=${result.business[i].website} target="_blank">${result.business[i].website}</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>`;
+            </div>`;
           $("#append-businesses").append(newCard);
         }
       }

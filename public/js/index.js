@@ -24,6 +24,9 @@ $(document).ready(() => {
     $.get("/api/businesses/" + category, result => {
       console.log(result);
       $(document.body).html(result);
+      document.querySelector("#index-business-cards").scrollIntoView({
+        behavior: "smooth"
+      });
     });
   }
 
@@ -31,6 +34,9 @@ $(document).ready(() => {
   function getBusinessesByCity(city) {
     $.get("/api/city/" + city, result => {
       $(document.body).html(result);
+      document.querySelector("#index-business-cards").scrollIntoView({
+        behavior: "smooth"
+      });
     });
   }
 
@@ -38,6 +44,9 @@ $(document).ready(() => {
   function getBusinessesByCityAndCategory(city, category) {
     $.get("/api/cityandcategory/" + city + "/" + category, result => {
       $(document.body).html(result);
+      document.querySelector("#index-business-cards").scrollIntoView({
+        behavior: "smooth"
+      });
     });
   }
 });
