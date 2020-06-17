@@ -3,9 +3,30 @@ form.login {
   margin-top: 50px;
 }
 
-.page {
-  position: relative;
+html {
+  box-sizing: border-box;
 }
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+
+.wave-container {
+  position: relative;
+  background: #BE7F5E;
+  text-align: center;
+  overflow: hidden;
+}
+.wave-container > svg {
+  display: block;
+}
+
+/* .page {
+  position: relative; */
+  /* background-image: url(../assets/multiFist.jpeg); */
+/* } */
 
 .content {
   padding-bottom: 2.5rem
@@ -24,15 +45,46 @@ form.login {
 /* navbar */
 .navbar {
   background-color: #fee4d7;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .navbar-brand {
-  font-family: "Philosopher", sans-serif;
-  color: #553827;
-  -webkit-text-stroke: 1px #935934;
+  /* font-family: "Philosopher", sans-serif; */
+  font-family: 'Playfair Display', serif;
+  /* color: #553827;
+  -webkit-text-stroke: 1px #935934; */
   font-size: 30px;
   margin-left: 5px;
+  padding-bottom: 0;
+}
+
+.u {
+  color: #987545;
+  padding-bottom: 0
+}
+
+.p {
+  color: #b28f64;
+}
+
+.l {
+  color: #b55e09;
+}
+
+.i {
+  color: #b55e09;
+}
+
+.f {
+  color: #754e23;
+}
+
+.t {
+  color: #323b47;
+}
+
+.navbar-brand:hover {
+  color: #BE7F5E
 }
 
 .nav-link {
@@ -69,7 +121,7 @@ form.login {
 
 /* index */
 /* .bg {
-  background-image: url(../assets/kneel2.jpg);
+  background-image: url(../assets/multiFist.jpeg);
   height: 300px;
   background-size: cover;
   background-position: center;
@@ -81,9 +133,33 @@ form.login {
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  /* position: absolute;
-  bottom: 0;
+  /* opacity: 85%;
+  position: fixed;
+  bottom: 50px;
   right: 90px */
+}
+
+.upHead {
+  color: #FFF;
+  margin-top: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.descrip {
+  margin-left: 30px;
+  margin-right: 30px;
+  color: #FFF;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+
+.busLink {
+  font-family: 'Quicksand', sans-serif;
+  color: #fee4d7;
+  text-decoration: underline;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .fas {
@@ -101,6 +177,7 @@ form.login {
   text-align: center;
   justify-content: center;
   color: #553827;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .search-card {
@@ -285,9 +362,9 @@ h1:hover {
   color: #808080;
 }
 
-#business-search {
+/* #business-search {
   margin-top: 15px;
-}
+} */
 
 #index-title {
   color: #935934;
