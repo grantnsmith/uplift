@@ -5,6 +5,7 @@ form.login {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,*::before,*::after {
   box-sizing: inherit;
@@ -390,10 +391,6 @@ h1:hover {
 #business-icon {
   color: #808080;
 }
-
-/* #business-search {
-  margin-top: 15px;
-} */
 
 #index-title {
   color: #935934;
