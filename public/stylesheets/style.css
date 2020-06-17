@@ -15,7 +15,8 @@ body {
 
 .wave-container {
   position: relative;
-  background: #BE7F5E;
+  /* background: #BE7F5E; */
+  background-color: #fee4d7;
   text-align: center;
   overflow: hidden;
 }
@@ -46,6 +47,7 @@ body {
 .navbar {
   background-color: #fee4d7;
   /* margin-bottom: 30px; */
+  padding-bottom: 0px;
 }
 
 .navbar-brand {
@@ -55,7 +57,11 @@ body {
   -webkit-text-stroke: 1px #935934; */
   font-size: 30px;
   margin-left: 5px;
-  padding-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.upBrand {
+  margin-bottom: 0px;
 }
 
 .u {
@@ -89,7 +95,7 @@ body {
 
 .nav-link {
   color: #935934;
-  font-family: "Philosopher", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
 }
 
@@ -140,26 +146,31 @@ body {
 }
 
 .upHead {
-  color: #FFF;
-  margin-top: 20px;
+  justify-content: center;
+  /* margin-top: 20px; */
   font-family: 'Playfair Display', serif;
+  font-size: 100px;
 }
 
 .descrip {
   margin-left: 30px;
   margin-right: 30px;
-  color: #FFF;
+  color: #935934;
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
 }
 
 .busLink {
   font-family: 'Quicksand', sans-serif;
-  color: #fee4d7;
+  color: #553827;
   text-decoration: underline;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: bolder;
+}
+
+.busLink:hover {
+  color: #BE7F5E
 }
 
 .fas {
@@ -210,6 +221,13 @@ body {
 }
 
 /* about */
+.aboutHead {
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+  color: #553827;
+}
+
 .about-sect {
   justify-content: center;
   padding-top: 10px;
@@ -223,6 +241,9 @@ body {
 
 .about-body {
   justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: #553827;
 }
 
 /* footer */
@@ -238,6 +259,7 @@ body {
   bottom: 0;
   border-top: solid 2px #553827;
   height: 2.5rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .foot-link {
@@ -253,6 +275,7 @@ body {
 h1 {
   margin-bottom: 1.5rem;
   color: #553827;
+  font-family: 'Playfair Display', serif;
 }
 
 h1:hover {
@@ -326,7 +349,8 @@ h1:hover {
 }
 
 .charText {
-  color: #553827
+  color: #553827;
+  font-family: 'Playfair Display', serif;
 }
 
 .charHead {
@@ -335,7 +359,12 @@ h1:hover {
 
 .card-title,
 .card-text {
-  color: #553827
+  color: #553827;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card-link {
+  color: #a0aec0
 }
 
 /* Index Cards */
