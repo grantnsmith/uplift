@@ -11,18 +11,22 @@ $(() => {
 
   // AJAX call to perform scrape server side, parameter passed in for filter
   function getScrape(sortSelection) {
-    $.get("/scrape/" + sortSelection).then(data => {
-      if (sortSelection === "today") {
-        eventsToday = data;
-        return;
-      } else if (sortSelection === "week") {
-        eventsWeek = data;
-        return;
-      } else if (sortSelection === "month") {
-        eventsMonth = data;
-        return;
-      }
-    });
+    $.get("/scrape/" + sortSelection)
+      .then(data => {
+        if (sortSelection === "today") {
+          eventsToday = data;
+          return;
+        } else if (sortSelection === "week") {
+          eventsWeek = data;
+          return;
+        } else if (sortSelection === "month") {
+          eventsMonth = data;
+          return;
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   // When the sort button is clicked, update the button name and display the news by the requested sort
@@ -53,13 +57,14 @@ $(() => {
 
   // Make a get request and append the first 10 results
   function displayNews(sortRequest) {
-    $.get("/api/news/" + sortRequest).then(response => {
-      $(".list-unstyled").remove();
-      for (let i = 0; i < 10; i++) {
-        const articleDate = moment(response.articles[i].publishedAt)
-          .format("MMMM Do YYYY")
-          .toUpperCase();
-        const newArticle = `
+    $.get("/api/news/" + sortRequest)
+      .then(response => {
+        $(".list-unstyled").remove();
+        for (let i = 0; i < 10; i++) {
+          const articleDate = moment(response.articles[i].publishedAt)
+            .format("MMMM Do YYYY")
+            .toUpperCase();
+          const newArticle = `
           <ul class="list-unstyled">
             <li class="media">
               <img src=${response.articles[i].urlToImage} class="mr-3 article-image" alt="No Article Image">
@@ -72,9 +77,12 @@ $(() => {
               </div>
             </li>
           </ul>`;
-        $(".append-newsAndEvents").append(newArticle);
-      }
-    });
+          $(".append-newsAndEvents").append(newArticle);
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   // When "Events" is clicked, make font bolder and display the scraped events for a week by default
