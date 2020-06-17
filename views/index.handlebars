@@ -1,0 +1,76 @@
+{{> nav }}
+<div class="bg">
+  <div class="container index-sect background-base rounded col-md-10">
+    <div class="row justify-content-center">
+      <div class="row card about-card-sect d-flex algin-content-start flex-wrap col-md-11">
+        <div class="card-body about-body d-flex algin-content-start flex-wrap">
+          <div><p id="index-title">Uplift - this is what we do. Help the community by finding black-owned business. Charities and news. You can call also <a href="/addbusiness">add your own business.</a></p></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="business-search" class="container search background-base shadow p-3 mb-5 rounded col-md-10">
+  <div class="alert" role="alert">
+    <div class="row sPhrase">
+      <div>
+        <h3>Don't just talk about it, be about it! Support black-owned businesses!</h3>
+      </div>
+    </div>
+    <div class="row search-card">
+      <div class="card search-card-c d-flex algin-content-start flex-wrap col-md-10">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="business-form" class="search-words">What type of business are you looking for?</label>
+            <select class="form-control" id="bus-type" placeholder="Business Type">
+               <option value="0" selected>All Businesses</option>
+               <option value="1">Art Galleries</option>
+               <option value="2">Bakeries</option>
+               <option value="3">Bars</option>
+               <option value="4">Beauty & Spa</option>
+               <option value="5">Cafe</option>
+               <option value="6">Car Dealerships</option>
+               <option value="7">Catering</option>
+               <option value="8">Coffee & Tea</option>
+               <option value="9">Dessert</option>
+               <option value="10">Event Venues</option>
+               <option value="11">Grocery, Markets & Convenience Stores</option>
+               <option value="12">Gyms & Yoga Studios</option>
+               <option value="13">Hotel</option>
+               <option value="14">Music Venues & Dance Clubs</option>
+               <option value="15">Pet Services</option>
+               <option value="16">Restaurants</option>
+               <option value="17">Shopping</option>
+               <option value="18">Wine, Beer, Spirits</option>
+               <option value="19">Other</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="business-form" class="search-words">Where are you located?</label>
+            <select class="form-control" id="city-name" placeholder="City">
+              <option value="0" selected disabled>City...</option>
+              <option value="seattle">Seattle</option>
+            </select>
+          </div>
+        </div>
+        <div class="row submit">
+          <button class="btn my-2 my-sm-0" id="submit" href="#" type="submit">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+<div class="row row-col-1 row-cols-md-2">
+  {{#each business}}
+  {{> businessCards }}
+  {{/each}}
+</div>
+</div>
+{{> scripts }}
+<script type="text/javascript" src="js/index.js"></script>
+{{> footer }}

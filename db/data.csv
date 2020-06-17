@@ -1,0 +1,64 @@
+id,name,city,phone,website,address,twitter,instagram,facebook,createdBy,categoryId,createdAt,updatedAt
+1,A&M Jaimaican Bag Juice and Beef Patty,Seattle,0,null,null,null,null,https://www.facebook.com/bagjuiceandbeefpatty,avaarm,1,2020-05-30 02:57:55,2020-05-30 02:57:55 
+2,Adey Abeda,Central-District-Seattle,2063221617,https://adeyabeba.net/,2123 East Union St.,null,null,null,avaarm95,2,2020-05-30 02:57:55,2020-05-30 02:57:55
+3,Amy's Merkato,Hillman City-Seattle,2063242527,https://amyscafeseattle.com/,null,null,null,null,avaarm95,3,2020-05-30 02:57:55,2020-05-30 02:57:55
+4,Baked from the Hart,Mt Baker-Seattle,2066509191,bakedfromthehart.com,null,null,null,null,avaarm95,4,2020-05-30 02:57:55,2020-05-30 02:57:55
+5,Bananas Grill,Rainier Valley-Seattle,2064204839,null,null,null,null,https://www.facebook.com/Bananas-Grill/,avaarm95,5,2020-05-30 02:57:55,2020-05-30 02:57:55
+6,Black Magic Sweets,Greenwood-Seattle,0,www.blackmagicsweets.com,null,null,null,avaarm95,6,2020-05-30 02:57:55,2020-05-30 02:57:55
+7,Blackstar Kebabs,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,7,2020-05-30 02:57:55,2020-05-30 02:57:55
+8,Bongos,Seattle,2064204839,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,8,2020-05-30 02:57:55,2020-05-30 02:57:55
+9,Brown Liquor Cocktail Company,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,9,2020-05-30 02:57:55,2020-05-30 02:57:55
+10,Brown Sugar Baking Company,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,10,2020-05-30 02:57:55,2020-05-30 02:57:55
+11,Bruchelle's Bagel Bistro,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,11,2020-05-30 02:57:55,2020-05-30 02:57:55
+12,Cafe Avole,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,12,2020-05-30 02:57:55,2020-05-30 02:57:55
+13,Cafe Campagne,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,13,2020-05-30 02:57:55,2020-05-30 02:57:55
+14,Cafe Salem,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,14,2020-05-30 02:57:55,2020-05-30 02:57:55
+15,Central Cafe and Juice Bar,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,15,2020-05-30 02:57:55,2020-05-30 02:57:55
+16,City Teriyaki,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,16,2020-05-30 02:57:55,2020-05-30 02:57:55
+17,Conscious Eatery,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,17,2020-05-30 02:57:55,2020-05-30 02:57:55
+18,Corte Fino,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,18,2020-05-30 02:57:55,2020-05-30 02:57:55
+19,Cortona Cafe,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,19,2020-05-30 02:57:55,2020-05-30 02:57:55
+20,Delish Ethiopian,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,20,2020-05-30 02:57:55,2020-05-30 02:57:55
+21,Emerald City Fish and Chips,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,21,2020-05-30 02:57:55,2020-05-30 02:57:55
+22,Emma's BBQ,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,22,2020-05-30 02:57:55,2020-05-30 02:57:55
+23,Enat Ethiopian,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,23,2020-05-30 02:57:55,2020-05-30 02:57:55
+24,Ezell's Fried Chicken,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,24,2020-05-30 02:57:55,2020-05-30 02:57:55
+25,Fat's Chicken and Waffles,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,25,2020-05-30 02:57:55,2020-05-30 02:57:55
+26,Feed the People,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,26,2020-05-30 02:57:55,2020-05-30 02:57:55
+27,Footprint Wine Tap,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,27,2020-05-30 02:57:55,2020-05-30 02:57:55
+28,Gravy,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,28,2020-05-30 02:57:55,2020-05-30 02:57:55
+29,Heaven Sent Fried Chicken,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,29,2020-05-30 02:57:55,2020-05-30 02:57:55
+30,Island Soul,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,30,2020-05-30 02:57:55,2020-05-30 02:57:55
+31,Jebena Cafe,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,31,2020-05-30 02:57:55,2020-05-30 02:57:55
+32,Jerk Shack,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,32,2020-05-30 02:57:55,2020-05-30 02:57:55
+33,Jones Barbecue,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,33,2020-05-30 02:57:55,2020-05-30 02:57:55
+34,Jones Barbecue,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,34,2020-05-30 02:57:55,2020-05-30 02:57:55
+35,JuneBaby,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,35,2020-05-30 02:57:55,2020-05-30 02:57:55
+36,Kaffa,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,36,2020-05-30 02:57:55,2020-05-30 02:57:55
+37,Kezira Cafe,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,37,2020-05-30 02:57:55,2020-05-30 02:57:55
+38,King Philly Cheesesteaks,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,38,2020-05-30 02:57:55,2020-05-30 02:57:55
+39,Lil'Reds,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,39,2020-05-30 02:57:55,2020-05-30 02:57:55
+40,Lucinda Grain Bar,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,40,2020-05-30 02:57:55,2020-05-30 02:57:55
+41,Marjorie,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,41,2020-05-30 02:57:55,2020-05-30 02:57:55
+42,Meskel,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,42,2020-05-30 02:57:55,2020-05-30 02:57:55
+43,Mojito,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,43,2020-05-30 02:57:55,2020-05-30 02:57:55
+44,Osteria La Spiga,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,44,2020-05-30 02:57:55,2020-05-30 02:57:55
+45,Pam's Kitchen,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,45,2020-05-30 02:57:55,2020-05-30 02:57:55
+46,Plum Bistro,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,46,2020-05-30 02:57:55,2020-05-30 02:57:55
+47,Plum Chopped,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,47,2020-05-30 02:57:55,2020-05-30 02:57:55
+48,Poco Wine and Spirits,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,48,2020-05-30 02:57:55,2020-05-30 02:57:55
+49,Qeerroo Restaurant,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,49,2020-05-30 02:57:55,2020-05-30 02:57:55
+50,Queen Sheba,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,50,2020-05-30 02:57:55,2020-05-30 02:57:55
+51,Safari Njema,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,51,2020-05-30 02:57:55,2020-05-30 02:57:55
+52,Salare,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,52,2020-05-30 02:57:55,2020-05-30 02:57:55
+53,Scoop du Jour,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,53,2020-05-30 02:57:55,2020-05-30 02:57:55
+54,Simply Soulful,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,54,2020-05-30 02:57:55,2020-05-30 02:57:55
+55,Soulful Dishes,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,55,2020-05-30 02:57:55,2020-05-30 02:57:55
+56,Taste of the Caribbean ,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,56,2020-05-30 02:57:55,2020-05-30 02:57:55
+57,That Brown Girl Cooks,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,57,2020-05-30 02:57:55,2020-05-30 02:57:55
+58,The Comfort Zone,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,58,2020-05-30 02:57:55,2020-05-30 02:57:55
+59,The Station,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,59,2020-05-30 02:57:55,2020-05-30 02:57:55
+60,Tougo Coffee,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,60,2020-05-30 02:57:55,2020-05-30 02:57:5556,Soulful Dishes,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,56,2020-05-30 02:57:55,2020-05-30 02:57:55
+61,Umami Kushi,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,61,2020-05-30 02:57:55,2020-05-30 02:57:55
+62,Union Bar & Restaurant,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,62,2020-05-30 02:57:55,2020-05-30 02:57:55
+63,Where ya at Matt,Seattle,2064994019,http://www.blackstarkebab.com/,null,null,null,null,avaarm95,63,2020-05-30 02:57:55,2020-05-30 02:57:55

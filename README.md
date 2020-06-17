@@ -1,35 +1,71 @@
-# Project-2
+# Project-2-Change
 
 
 [![GitHub License](https://img.shields.io/badge/License-orange.svg)](Develop/License/MIT.md)
 [![Installation](https://img.shields.io/badge/Installation-blue.svg)](#installation)
+[![Packages](https://img.shields.io/badge/Packages-pruple.svg)](#packages)
 
 
 ## Description 
 
-Project-2 is a command-line-interface (CLI) application that allows a user to add, delete, and update team members of a business/company. The user will be allowed to input information about the team member such as title and employee ID. 
+Uplift is a command-line-interface (CLI) application that aims to support Black-owned businesses. The user can search for black-owned businesses in their   
+vicinity/ neighborhood or anywhere else. The application is intended to be a resource for business owners as well as consumers who are searching to support
+this community. The visitor to the website can make an account and add a business. 
 
-This project has helped me gain a better understanding of databases, particualrly the use of MySQL and the CRUD method-Create, Read, Update, and Delete- method (The four basic functions of persisitent storage). Additionally, I was also able to explore and gain a better understanding of inquirer.
+This project has given us the opportunity to learn about continuous integration services, like Travis CI, MVC (model,view, controller) organizational tool, as well as 
+using handlebars. 
+
+Through our application, we want to continue the conversaton about civil rights. It was created at the time of the 2020 protests against police brutality and was inpsired by the changes made by those who were speaking up and standing up for Black communities. We recognized 
+that the movement extends far beyond police brutality and encompasses decades of racial injustices and we want a continual resource 
+for the Black communitities and their allies to use as a tool of betterment.
 
 
 ## Table of Contents
 
-* [Technologies](#technologies)
+* [General Technologies](#technologies)
+* [Packages](#packages)
+* [APIs](#apis)
 * [Demonstration](#demonstration)
 * [Application](#Application)
 * [Installation](#installation)
+* [Future Direction](#future direction)
 * [Test](#test)
 * [Acknowledgements](#acknowledgements)
 * [Questions](#questions)
 
-## Technologies
-
+## General Technologies
 * JavaScript
+* Jquery
 * Bootstrap
 * Node.js
-* Inquirer.js
 * MySQL and MySQL Workbench
 * npm
+* Travis CLI 
+* ES Lint 
+* Heroku
+* SociableKit 
+* Puppeteer
+
+
+## Packages
+* ajax 
+* axios 
+* bcryptjs  
+* dotenv
+* express 
+* express-handlebars 
+* express-session
+* handlebars
+* mysql2
+* newsapi
+* node
+* nodemon
+* passport
+* passport-local
+
+## APIs
+* NewsAPI
+* CharityAPI
 
 
 ## Demonstration 
@@ -46,9 +82,16 @@ This project has helped me gain a better understanding of databases, particualrl
 
 The following installations are needed for this package:
 1. npm init  
-2. npm install inquirer, mysql, and console.table
+2. npm install listed dependencies
     
-Once in the correct directory (tracker.js), run "node tracker.js"
+Once in the correct directory (server.js), run "node server.js"
+
+## Future Direction 
+
+We intend to exapnd the database of the application as well as add more of the following features/ technologies:
+ *  Maps API 
+ *  Set Up a Donation Page 
+ *  Create a username isntead of the email 
 
 
 ## Test
@@ -58,21 +101,19 @@ Once in the correct directory (tracker.js), run "node tracker.js"
 
 ## Acknowledgements
 
-
-* [Common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates)
 * UW Coding Bootcamp instructional team and classmates
-    * test files already provided
-    * skeleton of html files already provided
-    * htmlRenderer.js already provided
 * [Inquirer documentation](https://www.npmjs.com/package/inquirer)
 * [Mysql documentation](https://www.npmjs.com/package/mysql)
+* Figma - wireframe design 
 
 
 ## Questions 
 
-If you have any questions, please contact me on:
+If you have any questions, please contact us on:
 GitHub at [avaarm](https://github.com/avaarm)
 Email at [Armenuhi](mailto:avaarm95@mail.com)
+
+
 
 
 

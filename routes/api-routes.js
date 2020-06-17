@@ -1,6 +1,10 @@
-// Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+require("dotenv").config();
+const NewsAPI = require("newsapi");
+const newsapi = new NewsAPI(process.env.NewsAPI_Key);
+const puppeteer = require("../util/scraper.js");
+const axios = require("axios");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -49,5 +53,178 @@ module.exports = function(app) {
         id: req.user.id
       });
     }
+  });
+
+  // GET route for showing all businesses
+  app.get("/api/businesses", (req, res) => {
+    db.Business.findAll({}).then(result => {
+      res.json(result);
+    });
+  });
+
+  //GET route for retrieving all businesses based on category
+  app.get("/api/businesses/:category", (req, res) => {
+    db.Business.findAll({
+      where: {
+        CategoryID: req.params.category
+      },
+      include: [db.Category]
+    }).then(result => {
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      res.render("index", businessObject);
+    });
+  });
+
+  //GET route for retreiving all business based on city
+  app.get("/api/city/:city", (req, res) => {
+    db.Business.findAll({
+      where: {
+        city: req.params.city
+      },
+      include: [db.Category]
+    }).then(result => {
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      res.render("index", businessObject);
+    });
+  });
+
+  //GET route for retreiving all business based on city and category
+  app.get("/api/cityandcategory/:city/:category", (req, res) => {
+    db.Business.findAll({
+      where: {
+        city: req.params.city,
+        CategoryID: req.params.category
+      },
+      include: [db.Category]
+    }).then(result => {
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook,
+          imageURL: result[i].dataValues.Category.imageURL
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      res.render("index", businessObject);
+    });
+  });
+
+  //POST route for saving a new business to the businesses table
+  app.post("/api/newBusiness", (req, res) => {
+    db.Business.create(req.body).then(result => {
+      res.json(result);
+    });
+  });
+
+  //GET route for querying the NewsAPI package for articles
+  app.get("/api/news/:sort", (req, res) => {
+    newsapi.v2
+      .everything({
+        q: "blm",
+        sortBy: req.params.sort,
+        language: "en"
+      })
+      .then(response => {
+        res.json(response);
+      });
+  });
+
+  // Uses puppeteer utility function scrape Eventbrite events based off today, week, or month selection
+  app.get("/scrape/:selection", (req, res) => {
+    puppeteer(req.params.selection).then(data => {
+      res.json(data);
+    });
+  });
+
+  // Finds businesses created by the user session identified by their email login
+  app.get("/api/member/:email", (req, res) => {
+    db.Business.findAll({
+      where: {
+        createdBy: req.params.email
+      }
+    }).then(result => {
+      const businessArray = [];
+      for (let i = 0; i < result.length; i++) {
+        const addBusiness = {
+          name: result[i].dataValues.name,
+          city: result[i].dataValues.city,
+          phone: result[i].dataValues.phone,
+          website: result[i].dataValues.website,
+          address: result[i].dataValues.address,
+          twitter: result[i].dataValues.twitter,
+          instagram: result[i].dataValues.instagram,
+          facebook: result[i].dataValues.facebook
+        };
+        businessArray.push(addBusiness);
+      }
+      const businessObject = {
+        business: businessArray
+      };
+      res.json(businessObject);
+    });
+  });
+
+  // Queries charityapi.orghunter.com API and returns response in JSON
+  app.get("/api/charities", (req, res) => {
+    const config = {
+      headers: {
+        "X-Requested-With": "XMLHttpRequest"
+      }
+    };
+    axios
+      .get(
+        `https://cors-anywhere.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=${process.env.CharityAPI_Key}&category=R&searchTerm=african%20american`,
+        config
+      )
+      .then(response => {
+        res.json(response.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   });
 };

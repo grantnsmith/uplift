@@ -2,3 +2,297 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.page {
+  position: relative;
+}
+
+.content {
+  padding-bottom: 2.5rem
+}
+
+.btn:hover {
+  background-color: #935934;
+  color: #fee4d7;
+}
+
+.background-base {
+  background-color: #e6a17d;
+  border: solid #553827;
+}
+
+/* navbar */
+.navbar {
+  background-color: #fee4d7;
+  margin-bottom: 30px;
+}
+
+.navbar-brand {
+  font-family: "Philosopher", sans-serif;
+  color: #553827;
+  -webkit-text-stroke: 1px #935934;
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.nav-link {
+  color: #935934;
+  font-family: "Philosopher", sans-serif;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  color: #553827;
+}
+
+.navbar-toggler {
+  border: solid #935934;
+  color: #553827;
+}
+
+#loginSignUp {
+  border: solid #935934;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#loginSignUp:hover {
+  background-color: #935934;
+  color: #fee4d7;
+}
+
+.dropdown-menu,
+.btn {
+  border: solid #935934;
+  color: #935934;
+}
+
+/* index */
+/* .bg {
+  background-image: url(../assets/kneel2.jpg);
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 5px;
+} */
+
+.index-sect {
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* position: absolute;
+  bottom: 0;
+  right: 90px */
+}
+
+.fas {
+  justify-content: center;
+  padding-top: 4px;
+  color: #553827;
+}
+
+.submit {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sPhrase {
+  text-align: center;
+  justify-content: center;
+  color: #553827;
+}
+
+.search-card {
+  justify-content: center;
+  padding: 10px;
+}
+
+.search-card-c {
+  justify-content: center;
+  background-color: #fee4d7;
+}
+
+.search-words {
+  color: #553827;
+  padding-top: 5px;
+}
+
+.b-card-sect {
+  background-color: #e6a17d;
+}
+
+.b-card {
+  margin: 2px;
+  justify-content: center;
+  padding: 5px;
+}
+
+.card-img-top {
+  justify-content: center;
+}
+
+/* about */
+.about-sect {
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.about-card-sect {
+  justify-content: center;
+  background-color: #fee4d7;
+}
+
+.about-body {
+  justify-content: center;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  background-color: #fee4d7;
+  color: #553827;
+  /* margin-top: 10px; */
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: solid 2px #553827;
+  height: 2.5rem;
+}
+
+.foot-link {
+  color: #553827;
+}
+
+.fab {
+  padding: 2px;
+}
+
+/* News and Events */
+/* ---------------------------------- */
+h1 {
+  margin-bottom: 1.5rem;
+  color: #553827;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+#dropdownMenuButton {
+  border: solid #553827 1px;
+  color: #935934;
+}
+
+#dropdownMenuButton:hover {
+  background-color: #935934;
+  color: #fee4d7;
+}
+
+.article-image {
+  width: 6rem;
+  border-radius: 10px;
+}
+
+.article-title {
+  color: #935934;
+  font-weight: bold;
+}
+
+.article-date {
+  color: #a0aec0;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.article-description {
+  color: #2d3748;
+}
+
+.article-link,
+.fas {
+  color: #a0aec0;
+}
+
+.media {
+  background-color: #fee4d7;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.calendar-box {
+  width: 20%;
+  background-color: #553827;
+  color: white;
+  margin-right: 2rem;
+  border-radius: 8%;
+  font-weight: bold;
+  display: inline-block;
+  height: 6rem;
+  line-height: 6rem;
+  vertical-align: 3rem;
+  font-size: 2rem;
+  overflow: hidden;
+}
+/* ---------------------------------- */
+/* News and Events */
+
+#charCard {
+  background-color: #fee4d7;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+.charText {
+  color: #553827
+}
+
+.charHead {
+  text-align: center;
+}
+
+.card-title,
+.card-text {
+  color: #553827
+}
+
+/* Index Cards */
+
+.business-address {
+  color: #a0aec0;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.business-card-text {
+  color: #935934;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.address-link {
+  color: #a0aec0;
+}
+
+#business-icon {
+  color: #808080;
+}
+
+#business-search {
+  margin-top: 15px;
+}
+
+#index-title {
+  color: #935934;
+  font-family: "Philosopher", sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}

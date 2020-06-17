@@ -1,0 +1,28 @@
+{{> nav }}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-8 append-newsAndEvents">
+      <div class="d-flex justify-content-between">
+        <h1 id="news-header">News</h1>
+        <h1 id="events-header">Events</h1>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" data-state="news">
+            Sort By
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="drop-0" href="#" data-sort="publishedAt">Most Recent</a>
+            <a class="dropdown-item" id="drop-1" href="#" data-sort="popularity">Most Popular</a>
+            <a class="dropdown-item" id="drop-2" href="#" data-sort="relevancy">Most Relevant</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sk-ww-twitter-hashtag-feed col-12 col-md-4" data-embed-id="41475"></div>
+  </div>
+</div>
+
+{{> scripts }}
+<script type="text/javascript" src="js/newsAndEvents.js"></script>
+{{> footer }}
