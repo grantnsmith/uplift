@@ -39,4 +39,8 @@ module.exports = function(app) {
   app.get("/news", (req, res) => {
     res.render("newsAndEvents");
   });
+
+  app.get("/0", (req, res) => {
+    res.render("error");
+  });
 };
