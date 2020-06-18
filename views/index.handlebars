@@ -1,21 +1,33 @@
 {{> nav }}
-<div class="bg">
+{{!-- <div class="wave-container">
   <div class="container index-sect background-base rounded col-md-10">
     <div class="row justify-content-center">
       <div class="row card about-card-sect d-flex algin-content-start flex-wrap col-md-11">
         <div class="card-body about-body d-flex algin-content-start flex-wrap">
-          <div><p id="index-title">Uplift - this is what we do. Help the community by finding black-owned business. Charities and news. You can call also <a href="/addbusiness">add your own business.</a></p></div>
-          <div></div>
+          <div>
+            <p id="index-title">Uplift - this is what we do. Help the community by finding black-owned business. Charities and news. You can call also <a href="/addbusiness">add your own business.</a></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div> --}}
+
+<div class="wave-container">
+  <div class="row upHead">
+    <p class="u">U</p><p class="p">p</p><p class="l">l</p><p class="i">i</p><p class="f">f</p><p class="t">t</p>
+  </div>
+  <p class="descrip">Help the community by finding Black-owned businesses...If you want more, check out our Non-profits and News & Events page</p>
+  <a class="busLink" href="/addbusiness">add your own business.</a>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFF" fill-opacity="1" d="M0,64L24,80C48,96,96,128,144,144C192,160,240,160,288,176C336,192,384,224,432,229.3C480,235,528,213,576,186.7C624,160,672,128,720,144C768,160,816,224,864,218.7C912,213,960,139,1008,90.7C1056,43,1104,21,1152,26.7C1200,32,1248,64,1296,80C1344,96,1392,96,1416,96L1440,96L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
 </div>
 <div id="business-search" class="container search background-base shadow p-3 mb-5 rounded col-md-10">
   <div class="alert" role="alert">
     <div class="row sPhrase">
       <div>
-        <h3>Don't just talk about it, be about it! Support black-owned businesses!</h3>
+        <h3>Don't just talk about it, be about it! </h3>
+        <h3>Support black-owned businesses locally or nationally. </h3>
+
       </div>
     </div>
     <div class="row search-card">
@@ -50,12 +62,13 @@
             <label for="business-form" class="search-words">Where are you located?</label>
             <select class="form-control" id="city-name" placeholder="City">
               <option value="0" selected disabled>City...</option>
-              <option value="seattle">Seattle</option>
+              <option value="seattle">Seattle, WA</option>
+              <option value="monterey">Monterey, CA</option>
             </select>
           </div>
         </div>
         <div class="row submit">
-          <button class="btn my-2 my-sm-0" id="submit" href="#" type="submit">
+          <button class="btn my-2 my-sm-0" id="submit" href="#index-business-cards" type="submit">
             Submit
           </button>
         </div>
@@ -65,12 +78,21 @@
 </div>
 
 <div class="container-fluid">
-<div class="row row-col-1 row-cols-md-2">
+<div id="index-business-cards" class="row row-col-1 row-cols-md-2">
   {{#each business}}
   {{> businessCards }}
   {{/each}}
 </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div></div>
 {{> scripts }}
 <script type="text/javascript" src="js/index.js"></script>
 {{> footer }}

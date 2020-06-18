@@ -30,27 +30,27 @@ $("#businessSubmitButton").on("click", event => {
 
   // Set default values to 0 if not filled out
   if (!$("#phone").val()) {
-    newBusiness.phone = 0;
+    newBusiness.phone = null;
   }
 
   if (!$("#website").val()) {
-    newBusiness.website = 0;
+    newBusiness.website = null;
   }
 
   if (!$("#address").val()) {
-    newBusiness.address = 0;
+    newBusiness.address = null;
   }
 
   if (!$("#twitter").val()) {
-    newBusiness.twitter = 0;
+    newBusiness.twitter = null;
   }
 
   if (!$("#instagram").val()) {
-    newBusiness.instagram = 0;
+    newBusiness.instagram = null;
   }
 
   if (!$("#facebook").val()) {
-    newBusiness.facebook = 0;
+    newBusiness.facebook = null;
   }
 
   // get the email from users session, then post the values into the database and empty each input box

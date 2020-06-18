@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS upliftDB;
+-- DROP DATABASE IF EXISTS upliftDB;
 CREATE database upliftDB;
 
 USE upliftDB;
