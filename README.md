@@ -22,25 +22,25 @@ for the Black communitities and their allies to use as a tool of betterment.
 
 ## Table of Contents
 
-* [General Technologies](#technologies)
+* [General-Technologies](#general-technologies)
 * [Packages](#packages)
 * [APIs](#apis)
 * [Demonstration](#demonstration)
 * [Application](#Application)
 * [Installation](#installation)
-* [Future Direction](#future direction)
+* [Future-Direction](#future-direction)
 * [Test](#test)
 * [Acknowledgements](#acknowledgements)
 * [Questions](#questions)
 
-## General Technologies
+## General-Technologies
 * JavaScript
 * Jquery
 * Bootstrap
 * Node.js
 * MySQL and MySQL Workbench
 * npm
-* Travis CLI 
+* Travis CI 
 * ES Lint 
 * Heroku
 * SociableKit 
@@ -70,13 +70,15 @@ for the Black communitities and their allies to use as a tool of betterment.
 
 ## Demonstration 
 
-[Application Link](https://drive.google.com/file/d/1kshvcSYOK74Xfsc24ylWOdHXan1ZdfMy/view)
+* [Application Link](https://project-uplift.herokuapp.com/)
 
-![Application Demo](Assets/Images/EmployeeTracker.gif)
+![Application Demo](public/video.gif)
 
 ## Application 
 
-![Finished Product](Assets/Images/tracker.png)
+![Finished Product](public/appscreenshot.png)
+* [Product Pitch](https://docs.google.com/presentation/d/15Ta0yO-wjAurrKLhnWCmK_xgZ9Tl3LYatU0oFLu6ACQ/edit?usp=sharing)
+* [Product Brainstrorm Document](https://docs.google.com/document/d/19GbVyL6Xn9Fp5ne9Gotu0isAwqOV008TIHnhYGSOKJ0/edit)
 
 ## Installation
 
@@ -92,6 +94,7 @@ We intend to exapnd the database of the application as well as add more of the f
  *  Maps API 
  *  Set Up a Donation Page 
  *  Create a username isntead of the email 
+ *  Scaling the application 
 
 
 ## Test
