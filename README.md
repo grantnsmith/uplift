@@ -8,7 +8,7 @@
 
 ## Description 
 
-Uplift is a command-line-interface (CLI) application that aims to support Black-owned businesses. The user can search for black-owned businesses in their   
+Uplift is a web application that aims to support Black-owned businesses. The user can search for black-owned businesses in their   
 vicinity/ neighborhood or anywhere else. The application is intended to be a resource for business owners as well as consumers who are searching to support
 this community. The visitor to the website can make an account and add a business. 
 
