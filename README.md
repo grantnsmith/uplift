@@ -72,7 +72,6 @@ Through our application, we want to continue the conversaton about civil rights.
 
 ![Finished Product](public/appscreenshot.png)
 * [Product Pitch](https://docs.google.com/presentation/d/15Ta0yO-wjAurrKLhnWCmK_xgZ9Tl3LYatU0oFLu6ACQ/edit?usp=sharing)
-* [Product Brainstrorm Document](https://docs.google.com/document/d/19GbVyL6Xn9Fp5ne9Gotu0isAwqOV008TIHnhYGSOKJ0/edit)
 
 ## Installation
 
