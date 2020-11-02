@@ -1,4 +1,4 @@
-# Project-2-Change
+# Uplift
 
 
 [![GitHub License](https://img.shields.io/badge/License-orange.svg)](Develop/License/MIT.md)
@@ -8,16 +8,11 @@
 
 ## Description 
 
-Uplift is a web application that aims to support Black-owned businesses. The user can search for black-owned businesses in their   
-vicinity/ neighborhood or anywhere else. The application is intended to be a resource for business owners as well as consumers who are searching to support
-this community. The visitor to the website can make an account and add a business. 
+Uplift is a web application that aims to support Black-owned businesses. The user can search for black-owned businesses in their vicinity or anywhere else. The application is intended to be a resource for business owners as well as consumers who are searching to support this community. The visitor to the website can make an account and add a business. 
 
-This project has given us the opportunity to learn about continuous integration services, like Travis CI, MVC (model,view, controller) organizational tool, as well as 
-using handlebars. 
+This project has given us the opportunity to learn about continuous integration services, like Travis CI, MVC (model,view, controller) organizational tool, as well as using handlebars. 
 
-Through our application, we want to continue the conversaton about civil rights. It was created at the time of the 2020 protests against police brutality and was inpsired by the changes made by those who were speaking up and standing up for Black communities. We recognized 
-that the movement extends far beyond police brutality and encompasses decades of racial injustices and we want a continual resource 
-for the Black communitities and their allies to use as a tool of betterment.
+Through our application, we want to continue the conversaton about civil rights. It was created at the time of the 2020 protests against police brutality and was inpsired by the changes made by those who were speaking up and standing up for Black communities. We recognized that the movement extends far beyond police brutality and encompasses decades of racial injustices and we want a continual resource for the Black communitities and their allies to use as a tool of betterment.
 
 
 ## Table of Contents
@@ -67,7 +62,6 @@ for the Black communitities and their allies to use as a tool of betterment.
 * NewsAPI
 * CharityAPI
 
-
 ## Demonstration 
 
 * [Application Link](https://project-uplift.herokuapp.com/)
@@ -96,12 +90,6 @@ We intend to exapnd the database of the application as well as add more of the f
  *  Create a username isntead of the email 
  *  Scaling the application 
 
-
-## Test
-
-* Coming soon.
-
-
 ## Acknowledgements
 
 * UW Coding Bootcamp instructional team and classmates
@@ -109,12 +97,11 @@ We intend to exapnd the database of the application as well as add more of the f
 * [Mysql documentation](https://www.npmjs.com/package/mysql)
 * Figma - wireframe design 
 
-
 ## Questions 
 
 If you have any questions, please contact us on:
-GitHub at [avaarm](https://github.com/avaarm)
-Email at [Armenuhi](mailto:avaarm95@mail.com)
+GitHub at [grantnsmith](https://github.com/grantnsmith)
+Email at [Grant](mailto:grantnsmith@gmail.com)
 
 
 
