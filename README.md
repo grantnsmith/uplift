@@ -14,6 +14,7 @@ This project has given us the opportunity to learn about continuous integration 
 
 Through our application, we want to continue the conversaton about civil rights. It was created at the time of the 2020 protests against police brutality and was inpsired by the changes made by those who were speaking up and standing up for Black communities. We recognized that the movement extends far beyond police brutality and encompasses decades of racial injustices and we want a continual resource for the Black communitities and their allies to use as a tool of betterment.
 
+* [Application Link](https://project-uplift.herokuapp.com/)
 
 ## Table of Contents
 
@@ -99,8 +100,8 @@ We intend to exapnd the database of the application as well as add more of the f
 ## Questions 
 
 If you have any questions, please contact us on:
-GitHub at [grantnsmith](https://github.com/grantnsmith)
-Email at [Grant](mailto:grantnsmith@gmail.com)
+* GitHub at [grantnsmith](https://github.com/grantnsmith)
+* Email at [grantnsmith@gmail.com](mailto:grantnsmith@gmail.com)
 
 
 
