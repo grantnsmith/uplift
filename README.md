@@ -39,6 +39,7 @@ Through our application, we want to continue the conversaton about civil rights.
 * Travis CI 
 * ES Lint 
 * Heroku
+* JawsDB MySQL
 * SociableKit 
 * Puppeteer
 
